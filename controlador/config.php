@@ -34,7 +34,6 @@ define('CONTRASENA', 'd09;LU>l');
 
 /*define('USUARIO', 'sirex');
 define('CONTRASENA', 'x0uJcss2');
-
 define('BASE_DATOS', 'CET');
 define('SERVIDOR', '190.0.49.18');
 define('PUERTO', '3306');

@@ -26,6 +26,7 @@ define('TMP_PATH', '/Applications/XAMPP/xamppfiles/htdocs/corfuturoHV/PDF' . DIR
 
 //require_once '../../includes/swiftMailer/swift_required.php';
 
+//Conexion a la base de datos
 define('BASE_DATOS', 'SINFOMPC');
 define('SERVIDOR', '201.217.194.205');
 define('PUERTO', '3306');

@@ -1,4 +1,5 @@
-.DS_Store
-controlador/log.txt
+#Excluye el archivo de conexión a las base de datos
 controlador/config.php
 
+#Excluye el archivo log del controlador
+controlador/log.txt

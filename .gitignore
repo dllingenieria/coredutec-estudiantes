@@ -3,3 +3,6 @@ controlador/config.php
 
 #Excluye el archivo log del controlador
 controlador/log.txt
+
+#Excluye el index.html principal
+index.html

@@ -29,44 +29,13 @@ $(function () {
 
 	cargarCabezote();
 	cargarFooter();
-	//sessionStorage.tip_conf=0
-	
-	// $.datepicker.regional['es'] = {
-        // currentText: 'Hoy',
-        // monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        // monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-        // dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-        // dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-        // dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
-        // weekHeader: 'Sm',
-        // dateFormat: 'yy-mm-dd',
-        // firstDay: 1,
-        // isRTL: false,
-        // showMonthAfterYear: false,
-        // yearSuffix: '',
-		// changeMonth: true,
-		// changeYear: true
-		
-    // };
-	// $.datepicker.setDefaults($.datepicker.regional['es']);
-	// $('#txtFechaNacimiento').datepicker({
-    // //comment the beforeShow handler if you want to see the ugly overlay
-    // beforeShow: function() {
-        // setTimeout(function(){
-            // $('.ui-datepicker').css('z-index', 99999999999999);
-        // }, 0);
-    // }
-// });
-	//$("#txtFechaNacimiento").datepicker();
 	cargarDatosGeneralesEvaluacion();
-	//cargarDocentes();
 	cargarModulosVistosAevaluar(); //para evaluacion
 	cargarCursos();
 
 	//para que cargue los datos
-	$("#txtIdMatricula").val(sessionStorage.IdMatricula); 
-	$("#txtIdentificacion").val(sessionStorage.Identificacion);
-	
+	// $("#txtIdMatricula").val(sessionStorage.IdMatricula); 
+	// $("#txtIdentificacion").val(sessionStorage.Identificacion);
 	
 	//llenarDatos();
 	$("#guardarGestion").click(function(){
@@ -78,21 +47,14 @@ $(function () {
 		}
 	});
 
-
-	
-
 	function validarCampos(){
-		
-		var valido=true;   
-		
+		var valido=true;  
 		docente = $("#hidddocentes").val();
 		satisfaccion = $("#satisfaccion :selected").val();
 		descripcionSatisfaccion = $("#descripcionSatisfaccion").val(); //es obligatorio si calificacion es 3 o menor
 		descripcionServicio = $("#descripcionServicio").val(); //es obligatorio si calificacion es 3 o menor
-		
 		aspectosPositivos = $("#aspectosPositivos").val(); //no es obligatorio
 		aspectosParaMejorar = $("#aspectosParaMejorar").val(); //no es obligatorio
-	
 		
 		//Se verifica si alguno de los radios esta seleccionado claridad
 		if ($('input[name="claridad"]').is(':checked')) {
@@ -223,9 +185,6 @@ $(function () {
 					sessionStorage.nombreDocente=""; 
 				}, 3000);
 				
-				// $("divListaModulos").show();
-				// $("divEvaluacion").hide();
-				
 			}else {
 				PopUpError('No se pudo guardar la Evaluación');
 			}}, "json");
@@ -255,150 +214,139 @@ $(function () {
 	}
 	
 	$("#btnIngresar").click(function(){
-		ingresarAEvaluacion();
-		
+		if($("#txtIdentificacion").val() == "") {
+			PopUpError("Por favor escriba el Número de Identificación");
+		}else{
+			if($("#txtIdMatricula").val() == "") {
+				PopUpError("Por favor escriba el Id de Matrícula");
+			}else{
+				if($("#code").val() == "") {
+					PopUpError("Por favor escriba el Captcha");
+				}else{
+					ingresarAEvaluacion();
+				}
+			}
+		}
 	});
 	
 	function ingresarAEvaluacion(){ 
-		
 		IdMatricula=$("#txtIdMatricula").val(); 
 		sessionStorage.IdMatricula=IdMatricula;
 		identificacion=$("#txtIdentificacion").val();
 		sessionStorage.Identificacion=identificacion;
-		
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'verificarIngreso',
 			code:$("#code").val(),
 			IdMatricula:IdMatricula,
 			identificacion:identificacion
-			
 		}, function(data) {
 			if (data.error !== "") {
+				$("#txtIdMatricula").val('');
+				$("#txtIdentificacion").val('');
 				PopUpError(data.mensaje);
-				 setTimeout(function() {
-				location.reload(true);
-				}, 4000);
-				
+				// setTimeout(function() {
+				// location.reload(true);
+				// }, 4000);
 			}else {
-				//PopUpError(data.mensaje); 
-				console.log(data);
 				sessionStorage.nombres=data['nombres']; 
 				sessionStorage.idTercero=data['Id']; 
 				sessionStorage.numeroIdentificacion=data['NumeroIdentificacion'];
 				sessionStorage.lugarExpedicion=data['LugarExpedicion'];
-				
+				window.location.href = "evaluacion.html";
 				//sacar popup para seleccionar si desea evaluar
-					var divSeleccionModulo = $('<div>').attr({
-											 
-											 id: 'divSeleccionModulo'
-											 });
-											 
-											// agregamos nuevo div a la pagina
-											$('body').append(divSeleccionModulo);
-											
-											
-											var ancho = 600; 
-											var alto = 250;
-											
-											// fondo transparente
-											 // creamos un div nuevo, con un atributo
-											 var bgdiv = $('<div>').attr({
-											 
-											 id: 'bgtransparent'
-											 });
-											 
-											// agregamos nuevo div a la pagina
-											$('body').append(bgdiv);
-											
-											// obtenemos ancho y alto de la ventana del explorer
-											 var wscr = $(window).width();
-											 var hscr = $(window).height();
-					 
-											//establecemos el css para el div bgtransparent
-											$('#bgtransparent').css({'position':'fixed',
-																	'left':'0',
-																	'top':'0',
-																	'background-color':'#000',
-																	'opacity':'0.6',
-																	'filter':'alpha(opacity=60)',
-																	'z-index':' 10'																	
-																	});
-																	
-											
-											
-											//establecemos las dimensiones del fondo						
-											$('#bgtransparent').css("width", wscr);
-											$('#bgtransparent').css("height", hscr);
-											
-											
-											 // ventana modal
-											 // creamos otro div para la ventana modal y dos atributos
-											 var moddiv = $('<div>').attr({
-											 
-											 id: 'bgmodal'
-											 }); 
-											
-											// agregamos div a la pagina
-											$('body').append(moddiv);
-											
-											$('#bgmodal').css({
-												'position':'fixed', 
-												'background-image':'url("../../../vista/images/popupblanco.png")',
-												'font-family': "Roboto-Bold",
-												'font-size': '16px',
-												'border-radius':'15px',
-												'overflow':'auto',
-												'color':'#000',
-												'padding':'20px',
-												'width':'380px',
-												'height':' 96px',
-												'padding': '10px 40px',
-												'text-align':'center',
-												'z-index':' 20'
-												});
-											
-											// $( "#bgmodal" ).addClass( "element_to_pop_upMensaje" );					
-											// agregamos contenido HTML a la ventana modal
-											// $('#bgmodal').append(contenidoHTML);
-											$('#bgmodal').html("");
-											
-											//se agrega los botones al div
-											
-											
-											// $('#bgmodal').append(data.html);
-											// $('#bgmodal').append('<div><label class="popup"><br><br>Que acción desea realizar?</label><br><br><button id="btnEvaluacion" class="seleccionar">Evaluación</button><button id="btnCertificado" class="seleccionar">Certificados</button></div>');
-											$('#bgmodal').append('<div><label class="popup"><br><br>Que acción desea realizar?</label><br><br><button id="btnEvaluacion" class="seleccionar">Evaluación Módulos</button></div>');
-											
-											//response.html
-											// redimensionamos para que se ajuste al centro y mas
-											$(window).resize();
-											 $("button[id^=btnEvaluacion]").click(function(){ window.location.href = "evaluacion.html"; });
-											$("button[id^=btnCertificado]").click(function(){ window.location.href = "certificado.html"; });
-											 
-											 $('.seleccionar').css({
-												 'width': '180px',
-												 'height': '27px',
-												 'background':'#003265', 
-												 'color': '#ffffff',
-												 'font-family': 'Roboto-Light', 
-												 'font-size': '16px', 
-												 'border-radius': '6px 6px 6px 6px'
-											 });
-											 
+				// var divSeleccionModulo = $('<div>').attr({					 
+				//  	id: 'divSeleccionModulo'
+				//  });
+				 
+				// // agregamos nuevo div a la pagina
+				// $('body').append(divSeleccionModulo); 
+
+				// var ancho = 600; 
+				// var alto = 250;
 				
-				//window.location.href = "evaluacion.html";
+				// // fondo transparente
+				//  // creamos un div nuevo, con un atributo
+				//  var bgdiv = $('<div>').attr({
+				//   id: 'bgtransparent'
+				//  });
+				 
+				// // agregamos nuevo div a la pagina
+				// $('body').append(bgdiv);
 				
-			}}, "json");
+				// // obtenemos ancho y alto de la ventana del explorer
+				//  var wscr = $(window).width();
+				//  var hscr = $(window).height();
+
+				// //establecemos el css para el div bgtransparent
+				// $('#bgtransparent').css({
+				// 	'position':'fixed',
+				// 	'left':'0',
+				// 	'top':'0',
+				// 	'background-color':'#000',
+				// 	'opacity':'0.6',
+				// 	'filter':'alpha(opacity=60)',
+				// 	'z-index':' 10'																	
+				// 	});	
+				
+				// //establecemos las dimensiones del fondo						
+				// $('#bgtransparent').css("width", wscr);
+				// $('#bgtransparent').css("height", hscr);
+				
+				//  // ventana modal
+				//  // creamos otro div para la ventana modal y dos atributos
+				//  var moddiv = $('<div>').attr({
+				//  	id: 'bgmodal'
+				//  }); 
+				
+				// // agregamos div a la pagina
+				// $('body').append(moddiv);
+				
+				// $('#bgmodal').css({
+				// 	'position':'fixed', 
+				// 	'background-image':'url("../../../vista/images/popupblanco.png")',
+				// 	'font-family': "Roboto-Bold",
+				// 	'font-size': '16px',
+				// 	'border-radius':'15px',
+				// 	'overflow':'auto',
+				// 	'color':'#000',
+				// 	'padding':'20px',
+				// 	'width':'380px',
+				// 	'height':' 96px',
+				// 	'padding': '10px 40px',
+				// 	'text-align':'center',
+				// 	'z-index':' 20'
+				// 	});
+				
+				// $('#bgmodal').html("");
+				
+				// //se agrega los botones al div
+				// $('#bgmodal').append('<div><label class="popup"><br><br>Que acción desea realizar?</label><br><br><button id="btnEvaluacion" class="seleccionar">Evaluación Módulos</button></div>');
+				
+				// // redimensionamos para que se ajuste al centro y mas
+				// $(window).resize();
+				// $("button[id^=btnEvaluacion]").click(function(){ window.location.href = "evaluacion.html"; });
+				// $("button[id^=btnCertificado]").click(function(){ window.location.href = "certificado.html"; });
+				 
+				//  $('.seleccionar').css({
+				// 	 'width': '180px',
+				// 	 'height': '27px',
+				// 	 'background':'#003265', 
+				// 	 'color': '#ffffff',
+				// 	 'font-family': 'Roboto-Light', 
+				// 	 'font-size': '16px', 
+				// 	 'border-radius': '6px 6px 6px 6px'
+				//  });
+		}}, "json");
 	}
 	
 	function PopUpError(msj){
-    $("#textoError").text(msj);
-    $('#element_to_pop_upMen').bPopup({
-       speed: 450,
-       transition: 'slideDown'
-   });
-}
+	    $("#textoError").text(msj);
+	    $('#element_to_pop_upMen').bPopup({
+	       speed: 450,
+	       transition: 'slideDown'
+	   });
+	}
 
 	function popUpConfirmacion(msj){
 		$("#textoConfirmacion1").text(msj);
@@ -406,7 +354,7 @@ $(function () {
 		   speed: 450,
 		   transition: 'slideDown'
 	   });
-}
+	}
 
 function cargarCabezote(){
 	data="";		
@@ -417,9 +365,6 @@ function cargarCabezote(){
 	data+='<div class="loginTexto">Bienvenido (a) <span id="nombre">'+sessionStorage.nombres+'</span></div>';
 	data+='<button type="button" id="cerrarSesion" class="boton cerrarSesion">Cerrar Sesión</button>';
 	data+='</div>';
-	
-	
-	
 	$(".cabecera").html(data);	
 }
 
@@ -433,64 +378,53 @@ function cargarFooter(){
 }
 
 function cargarDatosGeneralesEvaluacion(){ //alert("entro");
-		//alert("sisi"+sessionStorage.IdMatricula);
-		
-		var sessionvalsel=sessionStorage.getItem("IdMatricula");
-		if(sessionvalsel !== null){//alert("entroooo");
+	var sessionvalsel=sessionStorage.getItem("IdMatricula");
+	if(sessionvalsel !== null){//alert("entroooo");
 
-			$.post("../../../controlador/fachada.php", {
-				clase: 'clsVerificarIngresoEvaluacion',
-				oper: 'cargarDatosGeneralesEvaluacion',
-				IdMatricula:sessionStorage.IdMatricula
-			}, function(data) {
-				if (data == "") {
-					PopUpError("No se pudieron consultar los datos generales de la evaluación");
-					 setTimeout(function() {
-					window.location.href = "ingresoEvaluacion.html";
-					}, 4000);
-					
-				}else {
-					
-					//console.log(data); //alert(data[0]['Nombre']);
-					sessionStorage.servicio=data[0]['Nombre'];
-					sessionStorage.docente=data[0]['IdDocente'];
-					sessionStorage.lugar=data[0]['Sede']; 
-					sessionStorage.nombreDocente=data[0]['Docente']; 
-					var f = new Date();
-					var mes = f.getMonth();
-					var mes1=(mes*1)+1;
-					if (mes1 >= 1 && mes1 <= 9){ 
-						mes1="0"+mes1;
-					}
-					var dia = f.getDate();
-					if (dia >= 1 && dia <= 9){ 
-						dia="0"+dia;
-					}
-					var fechaActual = f.getFullYear()+ "-" + mes1 + "-" +dia;
-					sessionStorage.fechaActual=fechaActual;
-										
-					//Se llena los datos de la información general
-					$("#hidddocentes").val(sessionStorage.docente); 
-					$("#fechaEvaluacion").val(sessionStorage.fechaActual);
-					$("#docentes").val(sessionStorage.nombreDocente);
-					$("#lugarServicio").val(sessionStorage.lugar);
-					$("#servicioEducativo").val(sessionStorage.servicio);
-					$("#divNombre").html("<b>Bienvenido (a): "+sessionStorage.nombres+"</b>");
-					
-				}}, "json");
-		}
-		// else{
-			// alert("vacia");
-		// }
+		$.post("../../../controlador/fachada.php", {
+			clase: 'clsVerificarIngresoEvaluacion',
+			oper: 'cargarDatosGeneralesEvaluacion',
+			IdMatricula:sessionStorage.IdMatricula
+		}, function(data) {
+			if (data == "") {
+				PopUpError("No se pudieron consultar los datos generales de la evaluación");
+				 setTimeout(function() {
+				window.location.href = "ingresoEvaluacion.html";
+				}, 4000);				
+			}else {
+				sessionStorage.servicio=data[0]['Nombre'];
+				sessionStorage.docente=data[0]['IdDocente'];
+				sessionStorage.lugar=data[0]['Sede']; 
+				sessionStorage.nombreDocente=data[0]['Docente']; 
+				var f = new Date();
+				var mes = f.getMonth();
+				var mes1=(mes*1)+1;
+				if (mes1 >= 1 && mes1 <= 9){ 
+					mes1="0"+mes1;
+				}
+				var dia = f.getDate();
+				if (dia >= 1 && dia <= 9){ 
+					dia="0"+dia;
+				}
+				var fechaActual = f.getFullYear()+ "-" + mes1 + "-" +dia;
+				sessionStorage.fechaActual=fechaActual;
+									
+				//Se llena los datos de la información general
+				$("#hidddocentes").val(sessionStorage.docente); 
+				$("#fechaEvaluacion").val(sessionStorage.fechaActual);
+				$("#docentes").val(sessionStorage.nombreDocente);
+				$("#lugarServicio").val(sessionStorage.lugar);
+				$("#servicioEducativo").val(sessionStorage.servicio);
+				$("#divNombre").html("<b>Bienvenido (a): "+sessionStorage.nombres+"</b>");
+			}}, "json");
 	}
+}
 	
 	function llenarDatos(){ //alert("hh"+sessionStorage.lugar+"-"+sessionStorage.servicio+"-"+sessionStorage.docente+"-"+sessionStorage.fechaActual); alert("llenar datos"); 
 		$("#txtFechaEvaluacion").val(sessionStorage.fechaActual);
 		$("#docentes").val(sessionStorage.docente);
 		$("#lugarServicio").val(sessionStorage.lugar);
 		$("#servicioEducativo").val(sessionStorage.servicio);
-		// $("#servicioEducativo").val("mi servicio");
-		
 	}
 	
 	$("#btnEvaluar").click(function(){ 
@@ -504,57 +438,43 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
     });
 	
 	$("#volverListaModulosaEvaluar").click(function(){ 
-   
 		tablaModulos.$('tr.selected').removeClass('selected');
 		codigo = "";
 		$("#divEvaluacion").hide();
 		$("#divListaModulos").show(); //o destruir el data table
-         
-		 
     });
 	
 	$("#btnVolver").click(function(){ 
         window.location.href = "ingresoEvaluacion.html";
     });
+
+    $("#cerrarSesion").click(function(){ 
+        window.location.href = "ingresoEvaluacion.html";
+    });
 	
 	function cargarModulosVistosAevaluar(){ //para evalucion
-		
-		
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarModulosVistosAevaluar',
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
-			
-			
 		}, function(data) { //console.log(data);
 			if (data !== "") {
-				// if (data.error == ""){
-					cargarDatosEnTabla(data);
-					$("#hiddNombEstu").val(sessionStorage.nombres);
-					$("#hiddIdenEstu").val(sessionStorage.numeroIdentificacion);
-					$("#hiddLugarExp").val(sessionStorage.lugarExpedicion);
-					
-					//$("#divListaModulos").hide();
-					
-					
-				// }
+				cargarDatosEnTabla(data);
+				$("#hiddNombEstu").val(sessionStorage.nombres);
+				$("#hiddIdenEstu").val(sessionStorage.numeroIdentificacion);
+				$("#hiddLugarExp").val(sessionStorage.lugarExpedicion);
 			}else {
 				PopUpError(data.mensaje);
-				
 			}}, "json");
 	}
 	
 	function cargarModulosVistosParaCertificados(){ //para certificados 
-		
-		
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarModulosVistosAcertificar',
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
-			
-			
 		}, function(data) { console.log(data);
 			if (data !== "") {
 				// if (data.error == ""){
@@ -562,37 +482,25 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 					$("#hiddNombEstu").val(sessionStorage.nombres);
 					$("#hiddIdenEstu").val(sessionStorage.numeroIdentificacion);
 					$("#hiddLugarExp").val(sessionStorage.lugarExpedicion);
-					
-				// }
 			}else {
 				PopUpError(data.mensaje);
-				
 			}}, "json");
 	}
 	
 	function cargarCursos(){ //alert("otro");
-		
-		
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarCursos',
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
-			
-			
 		}, function(data) { //console.log(data);
 			if (data !== "") {
-				// if (data.error == ""){
 					cargarDatosEnTablaCurso(data);
 					$("#hiddNombEstu").val(sessionStorage.nombres);
 					$("#hiddIdenEstu").val(sessionStorage.numeroIdentificacion);
 					$("#hiddLugarExp").val(sessionStorage.lugarExpedicion);
-					
-					
-				// }
 			}else {
 				PopUpError(data.mensaje);
-				
 			}}, "json");
 	}
 	
@@ -602,7 +510,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
             tablaCursos.destroy();
             $('#tablaCursos').empty();
         }
-	
         var tablaCursos = $('#tablaCursos').DataTable({
             "data": data,
             columns: columnasCurso,
@@ -626,7 +533,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
         });
 		
 		 $('#tablaCursos tbody').on( 'click', 'tr', function () { 
-		
 			if ( $(this).hasClass('selected')) { //alert("hi");
                 $(this).removeClass('selected');
 				codigo ="";
@@ -636,7 +542,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 				$("#hiddNombreCur").val(nombreCurso);
 				$("#hiddModulo").val("");
 				$("#hiddDuracion").val(duracion);
-				
             }else{ //alert("ho");
                 tablaCursos.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
@@ -648,10 +553,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 				$("#hiddModulo").val("curso");
 				$("#hiddDuracion").val(duracion);
             }
-             
-            
         } );
-		
     }
 	
 	function cargarDatosEnTabla(data){  //para evaluacion
@@ -660,7 +562,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
             tablaModulos.destroy();
             $('#tablaModulos').empty();
         }
-	
         tablaModulos = $('#tablaModulos').DataTable({
             "data": data,
             columns: columnas,
@@ -681,24 +582,18 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
                 "Search:": "Filtrar"
             }
         });
-		
 		 $('#tablaModulos tbody').on( 'click', 'tr', function () { 
-		
 			if ( $(this).hasClass('selected')) { //alert("hi");
                 $(this).removeClass('selected');
 				codigo ="";
 				$("#hiddcodigo").val(codigo);
-				
             }else{ //alert("ho");
                 tablaModulos.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
 				codigo = tablaModulos.row(this).data()[4]; //alert(codigo); codigo de la preprogramacion
 				$("#hiddcodigo").val(codigo);
             }
-             
-            
         } );
-		
     }
 	
 	function cargarDatosEnTablaCertificados(data){   
@@ -707,7 +602,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
             tablaModulosCertificados.destroy();
             $('#tablaModulosCertificados').empty();
         }
-	
         var tablaModulosCertificados = $('#tablaModulosCertificados').DataTable({
             "data": data,
             columns: columnas,
@@ -728,9 +622,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
                 "Search:": "Filtrar"
             }
         });
-		
 		 $('#tablaModulosCertificados tbody').on( 'click', 'tr', function () { 
-		
 			if ( $(this).hasClass('selected')) { //alert("hi");
                 $(this).removeClass('selected');
 				codigo ="";
@@ -742,7 +634,6 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 				$("#hiddNombreCur").val(nombreCurso);
 				$("#hiddModulo").val("");
 				$("#hiddDuracion").val(duracion);
-				
             }else{ //alert("ho");
                 tablaModulosCertificados.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
@@ -756,10 +647,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 				$("#hiddModulo").val("modulo");
 				$("#hiddDuracion").val(duracion);
             }
-             
-            
         } );
-		
     }
 	
 	$("#btnModulos").click(function(){ 
@@ -767,28 +655,19 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 		cargarModulosVistosParaCertificados();
 		//$("#divOpcionBtn").hide();
 		$("#divListaCursos").hide();
-		
 	});
-	
 	
 	$("#btnVolverAcursos").click(function(){ 
 		$("#divListaModulosCertificados").hide();
 		//$("#divOpcionBtn").hide();
 		$("#divListaCursos").show();
-		
 	});
-	
 	
 	$("#btnGenerarCertiM").click(function(){ 
         if (codigo != "") { //alert("Debe seleccionar un módulo");
-           
 		   $('#frmCertiM').attr('action', '../../modelo/certificado.php?hiddNombEstu=hiddNombEstu&hiddIdenEstu=hiddIdenEstu&hiddcodigo=hiddcodigo&hiddLugarExp=hiddLugarExp&hiddModulo=hiddModulo&hiddNombreMod=hiddNombreMod&hiddNombreCur=hiddNombreCur&hiddDuracion=hiddDuracion');
 			codigo == "";
-		   
-				
 			$('#frmCertiM').submit();
-				
-			
          }
 		 else{
 			PopUpError("Debe seleccionar un módulo");
@@ -797,14 +676,9 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 	
 	$("#btnGenerarCertiC").click(function(){  //alert("codigo entro"+codigo);
         if (codigo != "") { //alert("Debe seleccionar un módulo");
-           
 		   $('#frmCertiC').attr('action', '../../../modelo/certificado.php?hiddNombEstu=hiddNombEstu&hiddIdenEstu=hiddIdenEstu&hiddcodigo=hiddcodigo&hiddLugarExp=hiddLugarExp&hiddModulo=hiddModulo&hiddNombreCur=hiddNombreCur&hiddDuracion=hiddDuracion');
 			codigo == "";
-		   
-				
 			$('#frmCertiC').submit();
-				
-			
          }
 		 else{
 			PopUpError("Debe seleccionar un módulo");
@@ -814,59 +688,40 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 	$(window).resize(function(){
 	var ancho = 420; 
     var alto = 150;
- // dimensiones de la ventana del explorer 
- var wscr = $(window).width();
- var hscr = $(window).height();
+	 // dimensiones de la ventana del explorer 
+	 var wscr = $(window).width();
+	 var hscr = $(window).height();
 
- // estableciendo dimensiones de fondo
- $('#bgtransparent').css("width", wscr);
- // $('#bgtransparent').css("height", hscr);
- $('#bgtransparent').css("height", 2500);
- 
- // estableciendo tamaño de la ventana modal
- $('#bgmodal').css("width", ancho+'px');
- $('#bgmodal').css("height", alto+'px');
- 
- // obtiendo tamaño de la ventana modal
- var wcnt = $('#bgmodal').width();
- var hcnt = $('#bgmodal').height();
- 
- // obtener posicion central
- var mleft = ( wscr - wcnt ) / 2;
- var mtop = ( hscr - hcnt ) / 2;
- 
- // estableciendo ventana modal en el centro
- $('#bgmodal').css("left", mleft+'px');
- $('#bgmodal').css("top", mtop+'px');
- });
+	 // estableciendo dimensiones de fondo
+	 $('#bgtransparent').css("width", wscr);
+	 // $('#bgtransparent').css("height", hscr);
+	 $('#bgtransparent').css("height", 2500);
+	 
+	 // estableciendo tamaño de la ventana modal
+	 $('#bgmodal').css("width", ancho+'px');
+	 $('#bgmodal').css("height", alto+'px');
+	 
+	 // obtiendo tamaño de la ventana modal
+	 var wcnt = $('#bgmodal').width();
+	 var hcnt = $('#bgmodal').height();
+	 
+	 // obtener posicion central
+	 var mleft = ( wscr - wcnt ) / 2;
+	 var mtop = ( hscr - hcnt ) / 2;
+	 
+	 // estableciendo ventana modal en el centro
+	 $('#bgmodal').css("left", mleft+'px');
+	 $('#bgmodal').css("top", mtop+'px');
+	 });
  
  $( "#satisfaccion" ).change(function() { 
 		validarSatisfaccion();
 	});
 	
 	function validarSatisfaccion(){
-		
 		var satisfaccion= $("#satisfaccion").val();
 		if(satisfaccion ==1 || satisfaccion ==2 || satisfaccion ==3){
 			PopUpError("Debe indicar el porque de su calificación");
 		}
-		
-		
 	}
-	
-	// $( ".tablaE" ).change(function() { 
-		// validarTablaE();
-	// });
-	
-	// function validarTablaE(){
-		// var satisfaccion="";
-		// $(".tablaE").each(function(e){
-			// satisfaccion=$( this ).val();
-			// if(satisfaccion ==1 || satisfaccion ==2 || satisfaccion ==3){
-				// PopUpError("Debe indicar el porque de su calificación");
-			// }
-		// });
-		
-	// }
-	
 });

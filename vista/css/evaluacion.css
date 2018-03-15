@@ -9,6 +9,12 @@ body {
 	padding-top: 1.7rem;
 }
 
+#Principal{
+	width: 25rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .formatoEvaluacion {
 	position: relative;
 	padding-top: 1rem;

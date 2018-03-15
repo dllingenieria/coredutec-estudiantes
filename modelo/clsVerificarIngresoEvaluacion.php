@@ -30,7 +30,7 @@ class clsVerificarIngresoEvaluacion {
 					$data["nombres"]=$fila['Nombres']; 
 					$data["Id"]=$fila['Id']; 
 					$data["NumeroIdentificacion"]=$fila['NumeroIdentificacion']; 
-					$data["LugarExpedicion"]=$fila['LugarExpedicion']; 
+					$data["LugarExpedicion"]=$fila['LugarExpedicion'];
 				}
         } else {
             $data["mensaje"]="No se pudieron consultar los datos de ingreso";
@@ -41,10 +41,10 @@ class clsVerificarIngresoEvaluacion {
 		$key=$_SESSION[ 'key' ];
 		if( md5( $code) != $key ) {
 			if($data["mensaje"]==""){
-					$data["mensaje"].=" El código catcha no corresponde";
+					$data["mensaje"].=" El código captcha no corresponde";
 				}
 				else{
-					$data["mensaje"].=" ademas el código catcha no corresponde";
+					$data["mensaje"].=" además el código captcha no corresponde";
 				}
 			   $data["error"]=1;
 

@@ -1,0 +1,67 @@
+body {
+	background-image: url(../images/Fw.jpg);
+	background-size: cover;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1.5rem;
+}
+
+.tablaInformacion{
+	width: 100%;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.tablaInformacion td{
+	background-color: #F0F0F0;
+}
+
+.tablaInformacion th, .tablaInformacion td {
+	width: 1px;
+	padding: 5px;
+	text-align: left;   
+	white-space: nowrap; 
+}
+
+.tablaInformacion th{
+	font-family: "Roboto-Bold";
+	background-color: #003265;
+	color: white;
+}
+.tablaInformacion td{
+	font-family: "Roboto-Light";
+}
+
+.botones {
+    text-align: right;
+    margin-top: 0.9rem;
+    margin-right: -0.8rem;
+}
+
+#DivNotas{
+    width:90.5%; 
+    max-height: 100%;
+    position:relative; 
+    z-index: 3;
+    left:4rem;
+    
+}
+
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}
+
+#tblPopup {
+    margin-top: -22px;
+}

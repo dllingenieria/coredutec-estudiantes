@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+/* Seccion DIV MATRICULA */
+
+.RectanguloTitulos {
+	height:25px;
+	z-index:9;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 3px;
+	font-family: "Roboto-Bold";
+	font-size: 19px;
+	color: #003265;
+	padding-left: 12px;
+	padding-top: 1px;
+}
+
+.TdFormato {
+	border:none;
+	font-family: 'Roboto-Light'; 
+	font-size:13px; 
+	padding-left: 0.5rem; 
+}
+
+#procesocapacitacion {
+	width:320px;
+}
+
+#observaciones {
+	margin-left: 530px;
+	width:125px;
+}
+
+#confirmacion1 {
+	width:920px;
+	height:51px;
+	font-family: "Roboto-Regular";
+	font-size: 12px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#divisionpagina {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Light";
+	font-size: 18px;
+}
+
+#formatodematricula {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+/* Seccion Formularios */
+
+#formulario1 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#formulario2 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#formulario3 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Italic";
+	font-size: 14px;
+}
+
+#formulario4 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 14px;
+}
+
+#formulario5 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Regular";
+	font-size: 12px;
+}
+
+#formulario6 {
+	z-index:6;
+	margin-left: 5px;
+	font-family: "Roboto-Regular";
+	font-size: 13px;
+	height: 24px;
+	width: 1028px;
+}
+
+#formulario7 {
+	z-index:6;
+	margin-left: 5px;
+	font-family: "Roboto-Regular";
+	font-size: 13px;
+	height: 24px;
+}
+
+#formulario8 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#formulario9 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+}
+
+#formulario10 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#formulario11 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#formulario12 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Italic";
+	font-size: 14px;
+	height: 130px;
+}
+
+#formulario12 {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Regular";
+	font-size: 11px;
+	height: 130px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+

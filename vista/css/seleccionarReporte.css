@@ -1,0 +1,37 @@
+body {
+	background-image: url(../images/rombos2.png);
+	background-size: cover;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1.2rem;
+}
+
+.botones {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.top{
+    text-align: center;
+}
+
+.lista{
+	margin-right: 1rem;
+	height: 1.4rem;
+}
+
+.titulo, .lista {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ir {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+	margin-top: 0.5rem;
+} 
+

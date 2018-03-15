@@ -1,0 +1,63 @@
+body {
+	background-image: url(../images/patrones.png);
+	background-size: cover;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1.7rem;
+}
+
+.botones {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.lista{
+	margin-right: 1rem;
+	height: 1.4rem;
+}
+
+.titulo, .lista {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.abajo {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 3rem;
+	font-size: 1.5rem;
+} 
+
+.botonera {
+	bottom: 4.5rem;
+	position: absolute;
+	left: 47%;
+	margin-top: 13rem;
+	text-align: center;
+}
+.izquierda {
+	right: inherit;
+}
+
+.ir {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+	margin-top: 0.5rem;
+} 
+
+.top{
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+.filtros {
+	margin-right: 4rem;
+}
+
+.resaltar {
+	font-weight: bold;
+}

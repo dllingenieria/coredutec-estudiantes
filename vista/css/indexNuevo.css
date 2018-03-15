@@ -1,0 +1,56 @@
+body {
+	background-image: url(../images/rombos2.png);
+	background-size: cover;
+}
+
+.cuerpo {
+	text-align: right;
+}
+
+.botonRegistro{
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	margin-top: 1.6rem;
+}
+
+.contenedorIniciarSesion{
+	position: relative;
+	background-color: yellow;
+	width: 22rem;
+	height: 14rem;
+	display: inline-block;
+	margin-top: 4rem;
+	margin-right: 4rem;
+	padding-right: 1rem;
+}
+
+.tituloIniciarSesion{
+	position: absolute;
+	background-color: blue;
+	color: white;
+	top: 2rem;
+	left: -2rem;
+}
+
+.formulario{
+	margin-top: 5rem;
+}
+
+.campoIniciarSesion{
+	height: 2.3rem;
+	border: none;
+	vertical-align:top;
+	/*padding-left: 0.5rem;*/
+}
+
+.campoIniciarSesion:focus{
+	outline: none;
+}
+
+.icono{
+	padding: 0.5rem;
+	background-color: white;
+	width: 1.3rem;
+	border-top-left-radius: 0.4em;
+	border-bottom-left-radius: 0.4em;
+}

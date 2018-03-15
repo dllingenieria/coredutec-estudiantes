@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    	<title>Formato De Matricula</title>
+        <meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="../css/matricula.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/popups.css"/>      
+        <link rel="stylesheet" type="text/css" href="../css/fuentes.css"/>
+        <link rel="shortcut icon" href="../images/favicon.ico" />
+        <link rel="stylesheet" href="../../includes/sweetAlert/sweetalert.css">
+        <script src="../../includes/jquery-2.0.3.min.js" type="text/javascript" ></script>
+		<link rel="stylesheet" type="text/css" href="../../includes/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+		<script src="../../includes/jquery-ui-1.11.4.custom/jquery-ui.js" type="text/javascript" ></script>
+		
+        <script src="../../includes/jquery.cookie.js" type="text/javascript" ></script>
+        <script src="../../includes/jquery.bpopup.min.js" type="text/javascript"></script>
+        <script src="../../vista/js/matricula.js" type="text/javascript" ></script>
+        <script src="../../vista/js/sesion.js" type="text/javascript" ></script>
+        <script src="../../vista/js/nav_log.js" type="text/javascript" ></script>
+        <script src="../../includes/sweetAlert/sweetalert.min.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        
+         <!-- Sección Cabecera -->
+        
+       <div id="formaCabeceraAzul"></div>
+
+        <div id="imgLogoCet"><img src="../images/logocet.png" width="299" alt="logocet" /></div>
+
+        <div id="titulo1">SIREX - Sistema de Información</div>
+
+        <div id="titulo2">Proceso Relacionamiento con el Sector Externo</div>
+
+        <div id="titulo3">Bienvenido (a)</div>
+
+        <div id="division"></div>
+
+        <div id="formaRectanguloAmarillo"></div>
+        
+        <!-- Sección Pie Página -->
+   
+        <div id="formaRectanguloPiePagina"></div>
+        <div id="imgRedesSociales"><img src="../images/redessociales.png" width="146" alt="redessociales" /></div>
+        <div class="imgLogos"><img src="../images/barraLogos.png" height="49rem" alt="" /></div>
+        <div id="imgMatricula"><img src="../images/estudiantesmatricula.jpg" height="735" alt="matriculaimage" /></div>
+        
+        <!-- Sección Botones -->
+        
+        <div ><input id="btnCapturar" class="BotonCapturar" name="btnCapturar" type="button" value="Capturar Base De Datos" /></div>
+        <div ><input id="btnBuscar" class="BotonBuscar" name="btnBuscar" type="button" value="Buscar Por Documento" /></div>
+        <div ><input id="btnPreprogramacion" class="BotonPreprogramacion" name="btnPreprogramacion" type="button" value="Preprogramación" /></div>
+        <div ><input id="btnNovedades" class="BotonNovedades" name="btnNovedades" type="button" value="Novedades" /></div>
+        <div ><input id="btnMatriculas" class="BotonMatriculas" name="" type="button" value="Matriculas" /></div>
+        <div ><input id="btnEvaluacion" class="BotonEvaluacion" name="" type="button" value="Evaluación" /></div>
+        <div ><input id="btnFacturacion" class="BotonFacturacion" name="" type="button" value="Facturación" /></div>
+        <div ><input id="btnReportes" class="BotonReportes" name="" type="button" value="Reportes" /></div>
+        <div ><input id="btnAdministracion" class="BotonAdministracion" name="" type="button" value="Administración" /></div>
+        <div ><input id="btnCerrar" class="BotonCerrar" name="btnCerrar" type="button" value="Cerrar Sesión" /></div>
+
+
+		<!-- Sección Cuerpo Página -->
+        
+        <!-- Inscripción De Datos -->
+        <br><br>
+        <div id="lblInscripcionDatos" class="RectanguloTitulos"><label>Inscripción De Datos</label></div>
+        <div id="lblNombre" class="LblMatricula">Nombres</div>
+        <input type="text"  id="txtNombre" class="TxtMatricula"/>
+        <div id="lblApellido" class="LblMatricula">Apellidos</div>
+		<input type="text"  id="txtApellido" class="TxtMatricula"/>
+		
+        
+		
+        <div id="lblMesAsignacion" class="LblMatricula">Mes Asignación</div>
+        <input type="text"  id="txtMesAsignacion" class="TxtMatricula"/>
+        <div id="lblIdentificacion" class="LblMatricula">Identificación</div>
+        <input type="number"  id="txtIdentificacion" class="TxtMatricula" max="9999999999" readonly />
+        <div id="lblLugarExpedicion" class="LblMatricula">Lugar Expedición</div>
+        <select id="selectLugarExpedicion" class="TxtMatricula"></select>
+        <div id="lblEstadoCivil" class="LblMatricula">Estado Civil</div>
+        <select id="selectEstadoCivil" class="TxtMatricula"></select>
+        <div id="lblTelefonoFijo" class="LblMatricula" >Teléfono Fijo</div>
+        <input type="number"  id="txtTelefonoFijo" class="TxtMatricula" max="9999999" oninput="if(value.length>7)value=value.slice(0,7)"/>
+        <div id="lblTelefonoCelular" class="LblMatricula">Teléfono Celular</div>
+        <input type="number"  id="txtTelefonoCelular" class="TxtMatricula" max="9999999999" oninput="if(value.length>10)value=value.slice(0,10)"/>
+        <div id="lblTelefonoAlterno" class="LblMatricula">Teléfono Alterno</div>
+        <input type="number"  id="txtTelefonoAlterno" class="TxtMatricula" max="9999999999" oninput="if(value.length>10)value=value.slice(0,10)"/>
+        <div id="lblCorreoElectronico" class="LblMatricula">Correo Electrónico</div>
+        <input type="text"  id="txtCorreoElectronico" class="TxtMatricula"/>
+        <div id="lblEdad" class="LblMatricula">Edad</div>
+        <input type="number"  id="txtEdad" class="TxtMatricula" max="99"/>
+        <div id="lblGradoEscolaridad" class="LblMatricula">Grado De Escolaridad</div>
+        <select id="selectGradoEscolaridad" class="TxtMatricula"></select>
+        <div id="lblLocalidad" class="LblMatricula">Localidad</div>
+        <select id="selectLocalidad" class="TxtMatricula"></select>
+		<div id="lblFechaNacimiento" class="LblMatricula">Fecha Nacimiento</div>
+        <input type="text"  id="txtfechaNacimiento" class="TxtMatricula"/>
+        <!--<input type="hidden" id="fechaNacimiento"></input>-->
+        <input type="hidden" id="sexo"></input>
+        <input type="hidden" id="direccion"></input>
+        <input type="hidden" id="ciudad"></input>
+        <input type="hidden" id="tipoIdentificacion"></input>
+        
+ 
+        <!-- Proceso De Capacitación (Carga Del Sistema) -->
+ 
+        <br>
+        <div id="lblProcesoCapacitacionCarga" class="RectanguloTitulos"><label>Proceso De Capacitación</label> <label style="font-family: 'Roboto-Light'">(Carga Del Sistema)</label> </div>
+        <div id="lblTipoDeConvocatoriaCarga" class="LblMatricula">Convocatoria</div>
+        <input  id="txtTipoDeConvocatoriaCarga" class="TxtMatricula"/>
+        <div id="lblRutaNumeroCarga" class="LblMatricula">Ruta</div>
+        <input  id="txtRutaNumeroCarga" class="TxtMatricula"/>
+        <div id="lblCodigoCursoCarga" class="LblMatricula">Código Del Curso</div>
+        <input type="text"  id="txtCodigoCursoCarga" class="TxtMatricula"/>
+        <div id="lblNombreCursoCarga" class="LblMatricula">Nombre Del Curso</div>
+        <input readonly id="txtNombreCursoCarga" class="TxtMatricula"/>
+        <div id="lblEstadoCarga" class="LblMatricula">Estado</div>
+        <input  id="txtEstadoCarga" class="TxtMatricula"/>
+        <div id="lblModuloCarga" class="LblMatricula">Módulo</div>
+        <input  id="txtModuloCarga" class="TxtMatricula"/>
+        <div id="lblDuracionModuloCarga" class="LblMatricula">Duración De Módulo</div>
+        <input  id="txtDuracionModuloCarga" class="TxtMatricula"/>
+        
+        
+        <!-- Proceso De Capacitación (Matrícula) -->
+       
+        <br>
+        <div id="container_pro_cap">
+        <div id="lblProcesoCapacitacion" class="RectanguloTitulos"><label>Proceso De Capacitación</label> <label style="font-family: 'Roboto-Light'">(Matrícula)</label></div>
+        <div id="lblTipoDeConvocatoriaMatricula" class="LblMatricula">Convocatoria</div>
+        <input  id="txtTipoDeConvocatoriaMatricula" class="TxtMatricula" readonly/>
+        <div id="lblRutaNumeroMatricula" class="LblMatricula">Ruta</div>
+        <input  id="txtRutaNumeroMatricula" class="TxtMatricula" readonly/>
+        <div id="lblCodigoCursoMatricula" class="LblMatricula">Código Del Curso</div>
+        <input type="text"  id="txtCodigoCursoMatricula" class="TxtMatricula" readonly/>
+        <div id="lblNombreCursoMatricula" class="LblMatricula">Nombre Del Curso</div>
+        <select  id="cmbNombreCursoMatricula" class="TxtMatricula" disabled="true"></select>
+        <div id="lblDuracionCursoMatricula" class="LblMatricula">Duración Del Curso</div>
+        <input  id="txtDuracionCursoMatricula" class="TxtMatricula" readonly/>
+        <div id="lblModalidadMatricula" class="LblMatricula">Modalidad</div>
+        <select  id="cmbModalidadMatricula" class="TxtMatricula" readonly></select>
+        <div id="lblCodigoModuloMatricula" class="LblMatricula">Código Del Módulo</div>
+        <input type="text"  id="txtCodigoModuloMatricula" class="TxtMatricula" readonly/>
+        <div id="lblModuloMatricula" class="LblMatricula">Módulo</div>
+        <select  id="cmbModuloMatricula" class="TxtMatricula" readonly></select>
+        <div id="lblDuracionModuloMatricula" class="LblMatricula">Duración De Módulo</div>
+        <input  id="txtDuracionModuloMatricula" class="TxtMatricula" readonly/>
+        <div id="lblTipoFormacionMatricula" class="LblMatricula">Tipo De Formación</div>
+        <input type="text"  id="txtTipoFormacionMatricula" class="TxtMatricula" readonly/>
+        <div id="lblAreaOcupacionalMatricula" class="LblMatricula">Área Ocupacional</div>
+        <input type="text"  id="txtAreaOcupacionalMatricula" class="TxtMatricula" readonly/>
+        <div id="lblMatriculadoEnMatricula" class="LblMatricula">Matriculado en</div>
+        <select  id="cmbMatriculadoEnMatricula" class="TxtMatricula"></select>
+        <div id="lblHorarioMatricula" class="LblMatricula">Días de curso</div>
+        <input  id="txtHorarioMatricula" class="TxtMatricula" readonly/>
+        <div id="lblFechaFinal" class="LblMatricula">Fecha Final</div>
+        <input  id="txtFechaFinal" class="TxtMatricula" readonly/>
+        <div id="lblFechaInicial" class="LblMatricula">Fecha Inicial</div>
+        <input  id="txtFechaInicial" class="TxtMatricula" readonly/>
+        <div id="lblSedeMatricula" class="LblMatricula">Sede</div>
+        <input  id="txtSedeMatricula" class="TxtMatricula" readonly/>
+        <div id="lblDocenteMatricula" class="LblMatricula">Docente</div>
+        <input  id="txtDocenteMatricula" class="TxtMatricula" readonly/>
+        <div id="lblHoraInicio" class="LblMatricula">Horario</div>
+        <input type="text"  id="txtHoraInicio" class="TxtMatricula" />
+        <input type="hidden"  id="txtRutaNumeroMatriculaOculta" class="TxtMatricula" />
+        <input type="hidden"  id="txtTipoDeConvocatoriaMatriculaOculta" class="TxtMatricula" />
+        <div id="lblObservaciones" class="RectanguloTitulos"><label>Observaciones</label></div>
+        <div id="observaciones"><textarea id="txtObservaciones" name="observaciones" style="width:917px; height:52px; padding-left:5px; font-family: 'Roboto-Light'; border-radius: 3px 3px 3px 3px;"></textarea></div>
+        <div id="lblConfirmacion1" class="RectanguloTitulos"><label>Confirmo que fui informado de la importancia de asistir a la capacitación y que mi inasistencia es causal de pérdida de los beneficios del Mecanismo de Protección al
+         Cesante, comprometiéndome a cumplir con el 100 % del presente proceso.</label></div>
+        <div id="lblConfirmacion2" class="RectanguloTitulos"><label>*Los datos personales que se están recolectando en este formato tienen como única finalidad la realización de la Capacitación para Inserción Laboral en el Marco del Mecanismo de Protección al Cesante.</label></div>
+        <div id="lblConfirmacion3" class="RectanguloTitulos"><label></label></div>
+        <div><input id="btnGuardar" class="BotonGuardar" name="btnGuardar" type="button" value="Guardar" /></div>
+        <div><input id="btnActualizar" class="BotonGuardar BotonActualizar" name="btnGuardar" type="button" value="Actualizar" /></div>
+        <div><input id="btnCancelar" class="BotonCancelar" name="btnCancelar" type="button" value="Cancelar" /></div>
+        </div>
+              
+		
+		<div id="element_to_pop_upCon" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="300" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoConfirmacion1" class="popup"></label>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnDireccion"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div>
+		
+		<div id="element_to_pop_upMen" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="410" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoError" class="popup"></label>
+
+                    <br><br>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAcePop"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div> 
+		<div id="element_to_pop_upConfirmacion" class="element_to_pop_upConfirmacion">
+            <div>
+                <label id="textoConfirmatextoErrorcion1" class="popup" style="margin-left: -110px; font-family: 'Roboto-Regular'; font-size: 16px"> </label>
+            </div>
+            <br><br>           
+                <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAceCon"  class="b-close" style="margin-left: -89px; width: 96px; height: 27px; margin-top: -23px; background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 16 de 2016)  */
+
+body{
+	margin: 0 !important;
+}
+html {
+    margin: 0px;
+    padding: 0px;
+    margin-top: -8px;
+}
+table, th, td {
+	border-collapse: collapse;
+}
+
+td {
+	padding-left:5px
+}
+
+/* Seccion DIV MATRICULA */
+
+.RectanguloTitulos {
+	height:25px;
+	z-index:9;
+	background:#ffffff;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 3px;
+	font-family: "Roboto-Bold";
+	font-size: 19px;
+	color: #003265;
+	padding-left: 12px;
+	margin-top: 2rem;
+    margin-bottom: 0.5rem;
+	padding-top: 1px;
+	padding-bottom: 7px;
+}
+
+/* Seccion Tablas */
+
+#tablaPolitica{
+	z-index: 6;
+    margin-left: 10px;
+    font-size: 10px;
+    text-align: left;
+	margin-top: 10px;
+}
+
+#tablaDatos {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 10px;
+	margin-top: 10px;
+}
+
+#tablaDatos th{
+	text-align: left;
+}
+
+.tablaAsistenciaIn, #tablaAsistencia {
+	z-index:6;
+	margin-left: 10px;
+	font-size: 11px;
+	margin-top: 5px;
+}
+#tablaFirmas{
+	z-index:6;
+	margin-left: 10px;
+	font-size: 10px;
+    margin-top: 10px;
+}
+#tablaCalidad{
+	z-index:6;
+	margin-left: 10px;
+	font-size: 11px;
+	margin-top: 10px;
+}
+th{font-family: "Roboto-Bold"}
+td{font-family: "Roboto-Light"}
+
+.firma {
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+	margin-left: 0.6rem;
+	margin-top: 3rem;
+}
+
+.observaciones {
+	margin-top: 1rem;
+}
+td.sin-borde {
+    border-top-style: hidden;
+    border-left: hidden;
+}
+#tablaImportante {
+	z-index:6;
+	margin-left: 10px;
+	font-size: 10px;
+	text-align:center;
+	font-style:italic;
+	margin-top: 10px;
+}
+td.sin-borde-1 {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+td.sin-borde-2 {
+    border-bottom-style: hidden;
+    border-top-style: hidden;
+}
+
+hr.linea-firma {
+    margin-top: 15px;
+	margin-right: 40px;
+}
+td.text-firma {
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    font-size: 10px;
+	background-color: #E2E2E2;
+}
+td.sin-borde-3 {
+    border-right-style: hidden;
+}
+td.sin-borde-4{
+	border-top-style: hidden;
+	border-bottom-style: hidden;
+}
+.titulo-formato {
+    font-size: 10px;
+    font-weight: bold;
+}
+td.imagenes-formato {
+    text-align: center;
+}
+th.formato-firmas, td.formato-firmas {
+    background-color: #E2E2E2;
+}
+th.formato-firmas1 {
+    background-color: #E2E2E2;
+	font-size:10px;
+}
+.celdas-vacias{
+	height: 18px;
+	font-size: 11px;
+}
+.celdas-vacias2{
+	font-size: 10px;
+	height: 25px;
+}
+.formato-estudiantes{
+	font-size:10px;
+	height: 25px;
+}
+#tablaDatos input{
+	font-size:10px !important;
+}
+table#tablaAsistencia th {
+    font-size: 11px;
+}
+th.formato-firmas {
+    font-size: 11px;
+}
+.Termidado{
+	margin-top: 20px;
+}
+th#Apellidos {
+    width: 80px;
+}
+th#Nombres {
+    width: 80px;
+}
+th#Identificacion {
+    width: 50px;
+}
+th#telefono1 {
+    width: 25px;
+}
+th#telefono2 {
+    width: 25px;
+}

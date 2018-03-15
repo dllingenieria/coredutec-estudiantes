@@ -1,0 +1,923 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:30;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:30;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:30;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:30;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:30;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo3 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:30;
+	margin-left: 981px;
+	margin-top: 5px;
+	font-family: "Roboto-Light";
+	font-size: 15px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:30;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:30;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:30;
+	background:#003e7e;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:30;
+	bottom:0px;
+	left: 40px;	
+}
+
+.imgLogos {
+	position:fixed;
+	z-index:10;
+	bottom:-7px;
+	left: 876px;	
+}
+
+#imgMatricula {
+	position:absolute;
+	z-index:1;
+	margin-left: 941px;
+	margin-top:185px;
+}
+
+/* Seccion Títulos */
+
+div#lblNombre {
+    margin-top: 155px;
+}
+
+#txtNombre {
+    margin-top: 155px;
+}
+
+div#lblFechaNacimiento {
+    margin-top: 155px;
+	margin-left: 530px;
+}
+
+#txtfechaNacimiento {
+    margin-top: 155px;
+	margin-left: 709px;
+}
+
+.RectanguloTitulos {
+	position:absolute;
+	width:170px;
+	height:25px;
+	z-index:9;
+	background:#f7ea32;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 41px;
+	margin-top: 120px;
+	font-family: "Roboto-Bold";
+	font-size: 17px;
+	color: #003265;
+	padding-left: 12px;
+	padding-top: 1px;
+}
+
+#lblProcesoCapacitacion {
+	margin-top: 536px;
+	width:286px;
+}
+
+#lblProcesoCapacitacionCarga {
+	margin-top: 383px;
+	width:355px;
+}
+
+#lblObservaciones {
+	margin-top: 857px;
+	width:126px;
+}
+
+#lblConfirmacion1 {
+	margin-top: 966px;
+	width:1248px;
+	height:19px;
+	background:#003265;
+	font-family: "Roboto-ThinItalic";
+	font-size: 12px;
+	color: #ffffff;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#lblConfirmacion2 {
+	margin-top: 993px;
+	width:1109px;
+	height:19px;
+	font-family: "Roboto-Regular";
+	font-size: 12px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#lblConfirmacion3 {
+	margin-top: 1049px;
+	width:1109px;
+	height:30px;
+	background:#ffffff;
+}
+
+/* Seccion Cuerpo Página */
+
+/* Inscripción De Datos */
+
+.LblMatricula {
+	position:absolute;
+	width:167px;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 3px 0px 0px 3px;
+	margin-left: 41px;
+	margin-top: 185px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+
+.TxtMatricula {
+	position:absolute;
+	width:252px;
+	height:20px;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 0px 3px 3px 0px;
+	margin-left: 220px;
+	margin-top: 185px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border-top:1px solid #c5c5c5;
+	border-right:1px solid #c5c5c5;
+	border-bottom:1px solid #c5c5c5;
+	border-left:1px solid #c5c5c5;
+}
+
+#lblMesAsignacion {
+	margin-left: 530px;
+}
+
+#txtMesAsignacion {
+	margin-left: 709px;
+}
+
+#lblIdentificacion {
+	margin-top: 215px;
+}
+
+#txtIdentificacion {
+	margin-top: 215px;
+}
+
+#lblLugarExpedicion {
+	margin-top: 215px;
+	margin-left: 530px;
+}
+
+#selectLugarExpedicion {
+	margin-top: 215px;
+	margin-left: 709px;
+}
+
+#lblEstadoCivil {
+	margin-top: 245px;
+}
+
+#selectEstadoCivil {
+	margin-top: 245px;
+}
+
+#lblTelefonoFijo {
+	margin-top: 245px;
+	margin-left: 530px;
+}
+
+#txtTelefonoFijo {
+	margin-top: 245px;
+	margin-left: 709px;
+}
+
+#lblTelefonoCelular {
+	margin-top: 275px;
+}
+
+#txtTelefonoCelular {
+	margin-top: 275px;
+}
+
+#lblTelefonoAlterno {
+	margin-top: 275px;
+	margin-left: 530px;
+}
+
+#txtTelefonoAlterno {
+	margin-top: 275px;
+	margin-left: 709px;
+}
+
+#lblCorreoElectronico {
+	margin-top: 305px;
+}
+
+#txtCorreoElectronico {
+	margin-top: 305px;
+}
+
+#lblEdad {
+	margin-top: 305px;
+	margin-left: 530px;
+}
+
+#txtEdad {
+	margin-top: 305px;
+	margin-left: 709px;
+}
+
+#lblGradoEscolaridad {
+	margin-top: 335px;
+}
+
+#selectGradoEscolaridad {
+	margin-top: 335px;
+}
+
+#lblLocalidad {
+	margin-top: 335px;
+	margin-left: 530px;
+}
+
+#selectLocalidad {
+	margin-top: 335px;
+	margin-left: 709px;
+}
+
+
+/* Proceso De Capacitación (Carga Del Sistema) */
+
+#lblTipoDeConvocatoriaCarga {
+	margin-top: 423px;
+	width:130px;
+}
+
+#txtTipoDeConvocatoriaCarga {
+	margin-top: 423px;
+	margin-left: 183px;
+	width:203px;
+}
+
+#lblRutaNumeroCarga {
+	margin-top: 423px;
+	margin-left: 419px;
+	width:130px;
+}
+
+#txtRutaNumeroCarga {
+	margin-top: 423px;
+	margin-left: 561px;
+	width:112px;
+}
+
+#lblCodigoCursoCarga {
+	margin-top: 423px;
+	margin-left: 704px;
+	width:130px;
+}
+
+#txtCodigoCursoCarga {
+	margin-top: 423px;
+	margin-left: 846px;
+	width:112px;
+}
+
+#lblNombreCursoCarga {
+	margin-top: 453px;
+	width:130px;
+}
+
+#txtNombreCursoCarga {
+	margin-top: 453px;
+	margin-left: 183px;
+	width:490px;
+}
+
+#lblEstadoCarga {
+	margin-top: 453px;
+	margin-left: 704px;
+	width:130px;
+}
+
+#txtEstadoCarga {
+	margin-top: 453px;
+	margin-left: 846px;
+	width:112px;
+}
+
+#lblModuloCarga {
+	margin-top: 483px;
+	width:130px;
+}
+
+#txtModuloCarga {
+	margin-top: 483px;
+	margin-left: 183px;
+	width:490px;
+}
+
+#lblDuracionModuloCarga {
+	margin-top: 483px;
+	margin-left: 704px;
+	width:130px;
+}
+
+#txtDuracionModuloCarga {
+	margin-top: 483px;
+	margin-left: 846px;
+	width:112px;
+}
+
+/* Proceso De Capacitación (Matrícula) */
+
+
+#lblTipoDeConvocatoriaMatricula {
+	margin-top: 576px;
+	width:130px;
+}
+
+#txtTipoDeConvocatoriaMatricula {
+	margin-top: 576px;
+	margin-left: 183px;
+	width:203px;
+}
+
+#lblRutaNumeroMatricula {
+	margin-top: 576px;
+	margin-left: 419px;
+	width:130px;
+}
+
+#txtRutaNumeroMatricula {
+	margin-top: 576px;
+	margin-left: 561px;
+	width:112px;
+}
+
+#lblCodigoCursoMatricula {
+	margin-top: 576px;
+	margin-left: 704px;
+	width:130px;
+}
+
+#txtCodigoCursoMatricula {
+	margin-top: 576px;
+	margin-left: 846px;
+	width:112px;
+}
+
+#lblNombreCursoMatricula {
+	margin-top: 606px;
+}
+
+#cmbNombreCursoMatricula {
+	margin-top: 606px;
+	width:747px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblDuracionCursoMatricula {
+	margin-top: 636px;
+}
+
+#txtDuracionCursoMatricula {
+	margin-top: 636px;
+}
+
+#lblModalidadMatricula {
+	margin-top: 636px;
+	margin-left: 530px;
+}
+
+#cmbModalidadMatricula {
+	margin-top: 636px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblModuloMatricula {
+	margin-top: 666px;
+}
+
+#cmbModuloMatricula {
+	margin-top: 666px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblCodigoModuloMatricula {
+	margin-top: 666px;
+	margin-left: 530px;
+}
+
+#txtCodigoModuloMatricula {
+	margin-top: 666px;
+	margin-left: 709px;
+}
+
+#lblDuracionModuloMatricula {
+	margin-top: 696px;
+}
+
+#txtDuracionModuloMatricula {
+	margin-top: 696px;
+}
+
+#lblTipoFormacionMatricula {
+	margin-top: 696px;
+	margin-left: 530px;
+}
+
+#txtTipoFormacionMatricula {
+	margin-top: 696px;
+	margin-left: 709px;
+}
+
+#lblAreaOcupacionalMatricula {
+	margin-top: 726px;
+}
+
+#txtAreaOcupacionalMatricula {
+	margin-top: 726px;
+}
+
+#lblMatriculadoEnMatricula {
+	margin-top: 726px;
+	margin-left: 530px;
+}
+
+#cmbMatriculadoEnMatricula {
+	margin-top: 726px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblHorarioMatricula {
+	margin-top: 756px;
+}
+
+#txtHorarioMatricula {
+	margin-top: 756px;
+}
+
+#lblSedeMatricula {
+	margin-top: 756px;
+	margin-left: 530px;
+}
+
+#txtSedeMatricula {
+	margin-top: 756px;
+	margin-left: 709px;
+}
+
+#lblDocenteMatricula {
+	margin-top: 815px;
+}
+
+#txtDocenteMatricula {
+	margin-top: 815px;
+}
+
+#lblFechaInicial {
+	margin-top: 785px;
+}
+
+#txtFechaInicial {
+	margin-top: 785px;
+}
+
+#lblFechaFinal {
+	margin-top: 785px;
+        margin-left: 530px;
+}
+
+#txtFechaFinal {
+	margin-top: 785px;
+        margin-left: 709px;
+}
+
+#lblHoraInicio {
+	margin-top: 815px;
+	margin-left: 530px;
+}
+
+#txtHoraInicio {
+	margin-top: 815px;
+	margin-left: 709px;
+}
+
+#observaciones {
+	position:absolute;
+	z-index:5;
+	margin-left: 41px;
+	margin-top: 896px;
+}
+
+
+/* Seccion Botones */
+
+.BotonCapturar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: -8px;
+	padding: 7px 15px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 30;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCapturar:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff; 
+}
+
+.BotonBuscar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 174px;
+	padding: 7px 13px;
+	color: #ffffff;
+	font-family: "Roboto-Bold";
+	font-size: 0.9rem;
+	background-color: #003265;
+	z-index: 30;
+	border:1px solid #003265;
+	cursor:pointer;
+}
+
+.BotonPreprogramacion {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 349px;
+	padding: 7px 13px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 30;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonPreprogramacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff; 
+}
+
+.BotonNovedades {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 487px;
+	padding:7px 13px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 30;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonNovedades:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonMatriculas{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 586px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonMatriculas:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonEvaluacion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 681px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonEvaluacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonFacturacion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 778px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonFacturacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonReportes{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 1005px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonReportes:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonAdministracion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 881px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonAdministracion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonCerrar .BotonAdministracion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 946px;
+    width: 125px;
+    height: 35px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 16px;
+    background-color: #f7ea32;
+    z-index: 30;
+    border-top: 3px solid #f7ea32;
+    border-right: 3px solid #f7ea32;
+    border-bottom: 3px solid #f7ea32;
+    border-left: 3px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonAdministracion:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonCerrar{
+    position:fixed;
+	margin-top: 34px;
+	margin-left: 1169px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 30;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCerrar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+.BotonGuardar {
+    position:absolute;
+	margin-top: 912px;
+	margin-left: 1107px;
+	width:90px;
+	height:27px;
+	color: #ffffff;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonActualizar{
+	margin-left: 1010px;
+}
+
+.BotonGuardar:hover {
+	text-decoration:none;
+    background-color:#a7afff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border:1px solid #a7afff;
+	cursor:pointer; 
+}
+
+.BotonCancelar {
+    position:absolute;
+	margin-top: 912px;
+	margin-left: 1204px;
+	width:90px;
+	height:27px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCancelar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}

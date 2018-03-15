@@ -1,0 +1,322 @@
+@charset "utf-8";
+/* CSS Document */
+	
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */	
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:10;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:10;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:10;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:10;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:10;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:10;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:10;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:2;
+	background:#003265;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:6;
+	bottom:0px;
+	left: 40px;	
+}
+
+#imgRegistroGroup {
+	position:absolute;
+	z-index:1;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+
+/* Seccion Registro */	
+
+#formaCuadroAzul {
+	position:absolute;
+	width:391px;
+	height:432px;
+	border-radius: 4px 4px 4px 4px;
+	z-index:1;
+	background:#003265;
+	margin-left: 900px;
+	margin-top: 148px;
+}
+
+#lblRegistroUsuario {
+	position:absolute;
+	width:347px;
+	height:34px;
+	z-index:4;
+	background:#f7ea32;
+	border-radius: 6px 3px 3px 6px;
+	margin-left: 881px;
+	margin-top: 180px;
+	font-family: "Roboto-BlackItalic";
+	font-size: 24px;
+	color: #003265;
+	padding-left: 40px;
+	padding-top: 3px;
+}
+
+.TxtRegistro {
+	position:absolute;
+	width:200px;
+	height:24px;
+	z-index:4;
+	background:#ffffff;
+	border-radius: 4px 4px 4px 4px;
+	margin-left: 1010px;
+	margin-top: 246px;
+	font-family: "Roboto-Thin";
+	font-size: 18px;
+	color: #2d4191;
+	padding-left: 52px;
+	padding-top: 2px;
+	border-top:1px solid #ffffff;
+	border-right:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	border-left:1px solid #ffffff;
+	cursor:pointer;
+}
+
+#txtApellido {
+	margin-top: 290px;	
+}
+
+#txtCedula {
+	margin-top: 334px;	
+}
+
+#txtUsuario {
+	margin-top: 378px;	
+}
+
+#txtContrasena {
+	margin-top: 422px;	
+}
+
+#txtConfirmarContrasena {
+	margin-top: 466px;	
+}
+
+
+#imgUser1 {
+	position:absolute;
+	z-index:6;
+	margin-left: 1021px;
+	margin-top: 245px;
+}
+
+#imgUser2 {
+	position:absolute;
+	z-index:6;
+	margin-left: 1021px;
+	margin-top: 289px;
+}
+
+#imgUser3 {
+	position:absolute;
+	z-index:6;
+	margin-left: 1021px;
+	margin-top: 377px;
+}
+
+#imgId {
+	position:absolute;
+	z-index:6;
+	margin-left: 1021px;
+	margin-top: 334px;
+}
+
+#imgContrasena1 {
+	position:absolute;
+	z-index:6;
+	margin-left: 1020px;
+	margin-top: 420px;
+}
+
+#imgContrasena2 {
+	position:absolute;
+	z-index:6;
+	margin-left: 1020px;
+	margin-top: 464px;
+}
+
+/* Seccion Botones */
+
+.BotonAcceso {
+    position:fixed;
+	margin-top: 19px;
+	margin-left: 1035px;
+	padding-top: 0px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 10;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonAcceso:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+.BotonRegistro {
+    position:fixed;
+	margin-top: 19px;
+	margin-left: 1169px;
+	padding-top: 0px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #ffffff;
+	z-index: 10;
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+	border-bottom:3px solid #ffffff;
+	border-left:3px solid #ffffff;
+	cursor:pointer;
+}
+
+.BotonRegistro:hover {
+	text-decoration:none;
+    background-color:#ffffff;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+.BotonRegistrarse {
+    position:absolute;
+	margin-top: 521px;
+	margin-left: 1145px;
+	padding-top: 0px;
+	width:120px;
+	height:29px;
+	color: #003265;
+	font-family: "Roboto-Medium";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonRegistrarse:hover {
+	text-decoration:none;
+    background-color:#ffffff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+	border-bottom:3px solid #ffffff;
+	border-left:3px solid #ffffff;
+	cursor:pointer;
+	 
+}

@@ -1,0 +1,167 @@
+body {
+	background-image: url(../images/Fw.jpg);
+	background-size: cover;
+	width: 100%
+	height: 100%;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1.5rem;
+}
+
+.tablaInformacion{
+	width: 90%;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.tablaInformacion td{
+	background-color: #F0F0F0;
+}
+
+.tablaInformacion th, .tablaInformacion td {
+	width: 1px;
+	padding: 5px;
+	text-align: left;   
+	white-space: nowrap; 
+}
+
+.tablaInformacion th{
+	font-family: "Roboto-Bold";
+	background-color: #003265;
+	color: white;
+}
+.tablaInformacion td{
+	font-family: "Roboto-Light";
+}
+
+.datatable{
+	/*position:absolute;*/
+	width:70%;
+	height:25px;
+	z-index:9;
+	margin-left: 10px;
+	margin-top: 10px; /*190*/
+	font-size: 0.85rem;
+
+}
+
+.dataTable td, .dataTable th{
+	font-size: 0.7rem;
+}
+
+
+.botones {
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: -0.5rem;
+	clear:both;
+}
+
+.formatoEvaluacion {
+	position: relative;
+	padding-top: 1rem;
+}
+
+.PanelIzquierdo{
+  display: inline-block;
+  font-size: 1px;
+  letter-spacing: -1px;
+  width: 45%;
+  margin: auto;
+}
+
+.PanelDerecho{
+  align:right;
+  display: inline-block;
+  font-size: 1px;
+  letter-spacing: -1px;
+  width: 45%;
+  margin: auto;
+}
+
+
+.LblAzul {
+	display: inline-block;
+	width: 12rem;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 4px 0px 0px 4px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+
+.Txt1 {
+	height:1.5rem;
+	width: 101%;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 3px 3px 3px 3px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border:1px solid #c5c5c5;
+}
+
+.Txt2 {
+	height:1.5rem;
+	width: 101%;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 3px 3px 3px 3px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border:1px solid #c5c5c5;
+}
+
+.TextArea {
+	width:84%; 
+	height:5rem; 
+	padding-left:5px; 
+	padding-top:5px; 
+	font-family: 'Roboto-Light'; 
+	border-radius: 6px 6px 6px 6px;
+}
+
+.final {
+	margin-right: 0.5rem;
+}
+
+.cantidad {
+	width: 14%;
+}
+
+.descripcion {
+	width: 70%;
+}
+
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}
+
+.mensaje{
+	top: 1400px !important; 
+}
+
+.mensaje1{
+	top: 328.5px !important; 
+}

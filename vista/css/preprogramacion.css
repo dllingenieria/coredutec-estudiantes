@@ -1,0 +1,667 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:30;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:30;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:30;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:30;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:30;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo3 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:30;
+	margin-left: 981px;
+	margin-top: 5px;
+	font-family: "Roboto-Light";
+	font-size: 15px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:30;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:30;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:30;
+	background:#003265;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:30;
+	bottom:0px;
+	left: 40px;	
+}
+
+#imgPreprogramacion {
+	position:absolute;
+	z-index:1;
+	margin-left: 975px;
+	margin-top:117px;
+}
+
+/* Seccion Cuerpo Página */	
+
+.RectanguloTitulos {
+	position:absolute;
+	width:170px;
+	height:25px;
+	z-index:9;
+	background:#f7ea32;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 41px;
+	margin-top: 150px; /*antes 160*/
+	font-family: "Roboto-Bold";
+	font-size: 17px;
+	color: #003265;
+	padding-left: 12px;
+	padding-top: 1px;
+}
+
+#lblConsultaDatos {
+	width:154px;
+}
+
+.datatable{
+	position:absolute;
+	width:65%;
+	height:25px;
+	z-index:9;
+	margin-left: 41px;
+	margin-top: 180px; /*190*/
+	font-size: small !important; 
+	/*font-size: 0.95rem;*/
+
+}
+
+.dataTable td, .dataTable th{
+	/*font-size: 0.8rem;*/
+	font-size: x-small !important; 
+}
+
+
+.LblMatricula {
+	position:absolute;
+	width:167px;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 3px 0px 0px 3px;
+	margin-left: 41px;
+	margin-top: 220px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+
+.TxtMatricula {
+	position:absolute;
+	width:252px;
+	height:20px;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 0px 3px 3px 0px;
+	margin-left: 220px;
+	margin-top: 220px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border-top:1px solid #c5c5c5;
+	border-right:1px solid #c5c5c5;
+	border-bottom:1px solid #c5c5c5;
+	border-left:1px solid #c5c5c5;
+	cursor:pointer;
+}
+
+#cmbConvocatorias {
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblCodigoMatricula {
+	margin-left: 530px;
+}
+
+#txtCodigoMatricula {
+	margin-left: 709px;
+}
+
+#lblRutaDeFormacion {
+	margin-top: 260px;
+}
+
+#cmbRutaDeFormacion {
+	margin-top: 260px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblCurso {
+	margin-top: 260px;
+	margin-left: 530px;
+}
+
+#cmbCurso {
+	margin-top: 260px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblDuracionDelCurso {
+	margin-top: 300px;
+}
+
+#txtDuracionDelCurso {
+	margin-top: 300px;
+}
+
+#lblDiasDelCurso {
+	margin-top: 300px;
+	margin-left: 530px;
+}
+
+#cmbDiasDelCurso {
+	margin-top: 300px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblHoraInicio {
+	margin-top: 340px;
+}
+
+#cmbHoraInicio {
+	margin-top: 340px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblHoraFinal {
+	margin-top: 340px;
+	margin-left: 530px;
+}
+
+#cmbHoraFinal {
+	margin-top: 340px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblModulo {
+	margin-top: 380px;
+}
+
+#cmbModulo {
+	margin-top: 380px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblDuracionModulo {
+	margin-top: 380px;
+	margin-left: 530px;
+}
+
+#txtDuracionModulo {
+	margin-top: 380px;
+	margin-left: 709px;
+}
+
+#lblModalidadMatricula {
+	margin-top: 420px;
+}
+
+#cmbModalidadMatricula {
+	margin-top: 420px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblSede {
+	margin-top: 420px;
+	margin-left: 530px;
+}
+
+#cmbSede {
+	margin-top: 420px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblFechaInicio {
+	margin-top: 460px;
+	
+}
+
+#txtFechaInicio {
+	margin-top: 460px;
+}
+
+#lblFechaFinal {
+	margin-top: 460px;
+	margin-left: 530px;
+}
+
+#txtFechaFinal {
+	margin-top: 460px;
+	margin-left: 709px;
+}
+
+#lblDocente {
+	margin-top: 500px;	
+}
+
+#cmbDocente {
+	margin-top: 500px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblEntregables {
+	margin-top: 500px;
+	margin-left: 530px;
+}
+
+#cmbEntregables {
+	margin-top: 500px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblParticipantes {
+	margin-top: 500px;
+	margin-left: 530px;
+}
+
+#txtParticipantes {
+	margin-top: 500px;
+	margin-left: 709px;
+}
+
+#lblTipoDeCertificacion {
+	margin-top: 540px;
+}
+
+#cmbTipoDeCertificacion {
+	margin-top: 540px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+#lblEstado {
+	margin-top: 540px;
+	margin-left: 530px;
+}
+
+#cmbEstado {
+	margin-top: 540px;
+	margin-left: 709px;
+	width:259px;
+	height:24px;
+	padding-top: 0px;
+	padding-left: 1px;
+}
+
+
+/* Seccion Botones */
+
+.BotonCapturar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 40px;
+	width:220px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 31;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCapturar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonBuscar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 260px;
+	width:220px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 31;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonBuscar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonPreprogramacion {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 477px;
+	width:160px;
+	height:35px;
+	color: #ffffff;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #003265;
+	z-index: 31;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonPreprogramacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+	font-family: "Roboto-Bold";
+    color: #ffffff; 
+}
+
+.BotonNovedades {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 637px;
+	width:140px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 31;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonNovedades:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonCerrar {
+    position:fixed;
+	margin-top: 34px;
+	margin-left: 1169px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 31;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCerrar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+.BotonGuardar {
+    position:absolute;
+	margin-top: 538px;
+	margin-left: 999px;
+	width:90px;
+	height:27px;
+	color: #ffffff;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonGuardar:hover {
+	text-decoration:none;
+    background-color:#a7afff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:3px solid #a7afff;
+	border-right:3px solid #a7afff;
+	border-bottom:3px solid #a7afff;
+	border-left:3px solid #a7afff;
+	cursor:pointer; 
+}
+
+.BotonConsultar {
+    position:absolute;
+	margin-top: 538px;
+	margin-left: 1100px;
+	width:90px;
+	height:27px;
+	color: #ffffff;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonConsultar:hover {
+	text-decoration:none;
+    background-color:#a7afff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:3px solid #a7afff;
+	border-right:3px solid #a7afff;
+	border-bottom:3px solid #a7afff;
+	border-left:3px solid #a7afff;
+	cursor:pointer; 
+}
+
+.BotonCancelar {
+    position:absolute;
+	margin-top: 538px;
+	margin-left: 1202px;
+	width:90px;
+	height:27px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCancelar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+/* Seccion Pop Ups */
+
+#textoConfirmacion {
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	color: #003265;
+}
+
+.BotonMatriculas{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 755px;
+    width: 140px;
+    height: 35px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 17px;
+    background-color: #f7ea32;
+    z-index: 100;
+    border-top: 3px solid #f7ea32;
+    border-right: 3px solid #f7ea32;
+    border-bottom: 3px solid #f7ea32;
+    border-left: 3px solid #f7ea32;
+    cursor: pointer;
+}
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}

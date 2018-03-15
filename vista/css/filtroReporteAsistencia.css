@@ -1,0 +1,26 @@
+body {
+	background-image: url(../images/blue1.jpg);
+	background-size: cover;
+}
+
+.fijo{
+	display: inline-block;
+    text-align: left;
+    width: 6.5rem;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 5rem;
+}
+.cuerpo input{
+	width: 6.5rem;
+}
+.cuerpo select{
+	width: 6.5rem;
+}
+.botones {
+    text-align: center;
+    margin-top: 2rem;
+}

@@ -1,0 +1,10 @@
+body {
+	background-image: url(../images/patrones.png);
+	background-size: cover;
+}
+
+.contenedor {
+    text-align: center;
+    margin-top: 11rem;
+}
+

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Mayo 19 de 2016)  */
+
+.cuerpoCertificado {
+	width: 99%;
+	height: 99%;
+	border: solid 5px;
+	border-color: black;
+}
+
+.logos {
+	text-align: center;
+	padding: 1rem;
+}
+
+.titulo1 {
+	font-family: "Roboto-Black";
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.titulo2 {
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.titulo3 {
+	font-family: "Roboto-Black";
+	font-size: 1.6rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	text-align: center;
+}
+
+.titulo4 {
+	font-family: "Roboto-Light";
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+.titulo5 {
+	font-family: "Roboto-Medium";
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.titulo6 {
+	font-family: "Roboto-Medium";
+	font-size: 1rem;
+	text-align: center;
+}

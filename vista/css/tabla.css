@@ -1,0 +1,17 @@
+.dataTable th, .dataTable td { 
+	white-space: nowrap; cursor: pointer;
+	font-size: 0.95rem;
+}
+
+.dataTable td{
+	/*font-size: 0.8rem;*/
+}
+
+.dataTable th {
+	background-color: #003265;
+	color: white;
+}
+
+.dataTables_filter {
+    margin-bottom: 0.6rem;
+}

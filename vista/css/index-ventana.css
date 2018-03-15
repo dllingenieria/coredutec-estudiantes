@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+	
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:2;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:3;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:4;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:4;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:5;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:3;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:2;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:2;
+	background:#003265;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:6;
+	bottom:0px;
+	left: 40px;	
+}
+
+#imgStudentLogin {
+	position:absolute;
+	z-index:1;
+	margin-left: -8px;
+	margin-top: 0px;
+}
+
+/* Seccion Login */
+
+#formaCuadroAmarillo {
+	position:absolute;
+	width:391px;
+	height:229px;
+	border-radius: 4px 4px 4px 4px;
+	z-index:2;
+	background:#f7ea32;
+	margin-left: 900px;
+	margin-top: 242px;
+}
+
+#lblAccesoSistema {
+	position:absolute;
+	width:347px;
+	height:205px;
+	z-index:4;
+	border-radius: 6px 3px 3px 6px;
+	margin-top: 265px;
+	margin-left: 912px;
+	font-family: "Roboto-Regular";
+	font-size: 22px;
+	color: #003265;
+	padding-left: 40px;
+	padding-top: 3px;
+}
+
+.TxtAcceso {
+	position:absolute;
+	width:200px;
+	height:24px;
+	z-index:4;
+	background:#ffffff;
+	border-radius: 4px 4px 4px 4px;
+	margin-left: 1010px;
+	margin-top: 272px;
+	font-family: "Roboto-Thin";
+	font-size: 18px;
+	color: #2d4191;
+	padding-left: 52px;
+	padding-top: 2px;
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+	border-bottom:3px solid #ffffff;
+	border-left:3px solid #ffffff;
+	cursor:pointer;
+}
+
+#txtContrasena {
+	margin-top: 316px;	
+}
+
+#imgUser {
+	position:absolute;
+	z-index:6;
+	margin-left: 1021px;
+	margin-top: 272px;
+}
+
+#imgContrasena {
+	position:absolute;
+	z-index:6;
+	margin-left: 1020px;
+	margin-top: 315px;
+}
+
+
+
+/* Sección Recuperar Contraseña */
+
+#formaCuadroAzulError {
+	position:absolute;
+	width:391px;
+	height:69px;
+	border-radius: 4px 4px 4px 4px;
+	z-index:2;
+	background:#003265;
+	margin-top: 435px;
+	margin-left: 900px;
+}
+
+#lblDatosIncorrectos {
+	position:absolute;
+	width:277px;
+	height:24px;
+	z-index:16;
+	margin-left: 983px;
+	margin-top: 443px;
+	font-family: "Roboto-Light";
+	font-size: 18px;
+	color: #ffffff;
+}
+
+#lblOlvidoContrasena {
+	position:absolute;
+	width:277px;
+	height:24px;
+	z-index:16;
+	margin-left: 989px;
+	margin-top: 469px;
+	font-family: "Roboto-Bold";
+	font-size: 18px;
+	color: #f7ea32;
+}
+
+
+/* Seccion Botones */
+
+.BotonAcceso {
+    position:fixed;
+	margin-top: 19px;
+	margin-left: 1035px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #ffffff;
+	z-index: 7;
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+	border-bottom:3px solid #ffffff;
+	border-left:3px solid #ffffff;
+	cursor:pointer;
+}
+
+.BotonAcceso:hover {
+	text-decoration:none;
+    background-color:#ffffff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonRegistro {
+    position:fixed;
+	margin-top: 19px;
+	margin-left: 1169px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonRegistro:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonEntrar {
+    position:absolute;
+	margin-top: 359px;
+	margin-left: 1145px;
+	width:120px;
+	height:29px;
+	color: #ffffff;
+	font-family: "Roboto-Medium";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+	border-top:1px solid #003265;
+	border-right:1px solid #003265;
+	border-bottom:1px solid #003265;
+	border-left:1px solid #003265;
+	cursor:pointer;
+}
+
+.BotonEntrar:hover {
+	text-decoration:none;
+    background-color:#ffffff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:1px solid #ffffff;
+	border-right:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	border-left:1px solid #ffffff;
+	cursor:pointer;
+}

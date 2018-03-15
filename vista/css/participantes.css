@@ -1,0 +1,498 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:10;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:10;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:10;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:10;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:10;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo3 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:10;
+	margin-left: 981px;
+	margin-top: 5px;
+	font-family: "Roboto-Light";
+	font-size: 15px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:10;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:10;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:2;
+	background:#003265;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:6;
+	bottom:0px;
+	left: 40px;	
+}
+
+#imgParticipantes {
+	position:absolute;
+	z-index:1;
+	margin-left: 981px;
+	margin-top:136px;
+}
+
+/* Seccion Cuerpo Página */
+
+.RectanguloTitulos {
+	position:absolute;
+	width:170px;
+	height:25px;
+	z-index:9;
+	background:#f7ea32;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 41px;
+	margin-top: 180px;
+	font-family: "Roboto-Bold";
+	font-size: 17px;
+	color: #003265;
+	padding-left: 12px;
+	padding-top: 1px;
+}
+
+
+.LblMatricula {
+	position:absolute;
+	width:167px;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 3px 0px 0px 3px;
+	margin-left: 41px;
+	margin-top: 250px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+
+.TxtMatricula {
+	position:absolute;
+	width:252px;
+	height:20px;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 0px 3px 3px 0px;
+	margin-left: 220px;
+	margin-top: 250px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border-top:1px solid #c5c5c5;
+	border-right:1px solid #c5c5c5;
+	border-bottom:1px solid #c5c5c5;
+	border-left:1px solid #c5c5c5;
+	cursor:pointer;
+}
+
+#lblMesAsignacion {
+	margin-left: 530px;
+}
+
+#txtMesAsignacion {
+	margin-left: 709px;
+}
+
+#lblIdentificacion {
+	margin-top: 290px;
+}
+
+#txtIdentificacion {
+	margin-top: 290px;
+}
+
+#lblLugarExpedicion {
+	margin-top: 290px;
+	margin-left: 530px;
+}
+
+#txtLugarExpedicion {
+	margin-top: 290px;
+	margin-left: 709px;
+}
+
+#lblEstadoCivil {
+	margin-top: 330px;
+}
+
+#txtEstadoCivil {
+	margin-top: 330px;
+}
+
+#lblTelefonoFijo {
+	margin-top: 330px;
+	margin-left: 530px;
+}
+
+#txtTelefonoFijo {
+	margin-top: 330px;
+	margin-left: 709px;
+}
+
+#lblTelefonoCelular {
+	margin-top: 370px;
+}
+
+#txtTelefonoCelular {
+	margin-top: 370px;
+}
+
+#lblTelefonoAlterno {
+	margin-top: 370px;
+	margin-left: 530px;
+}
+
+#txtTelefonoAlterno {
+	margin-top: 370px;
+	margin-left: 709px;
+}
+
+#lblCorreoElectronico {
+	margin-top: 410px;
+}
+
+#txtCorreoElectronico {
+	margin-top: 410px;
+}
+
+#lblEdad {
+	margin-top: 410px;
+	margin-left: 530px;
+}
+
+#txtEdad {
+	margin-top: 410px;
+	margin-left: 709px;
+}
+
+#lblGradoEscolaridad {
+	margin-top: 450px;
+}
+
+#txtGradoEscolaridad {
+	margin-top: 450px;
+}
+
+#lblLocalidad {
+	margin-top: 450px;
+	margin-left: 530px;
+}
+
+#txtLocalidad {
+	margin-top: 450px;
+	margin-left: 709px;
+}
+
+#lblDireccion{
+	margin-top: 490px;
+}
+
+#txtDireccion {
+	margin-top: 490px;
+}
+
+
+/* Seccion Botones */
+
+.BotonCapturar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 40px;
+	width:220px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 30;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCapturar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonBuscar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 260px;
+	width:220px;
+	height:35px;
+	color: #ffffff;
+	font-family: "Roboto-Bold";
+	font-size: 17px;
+	background-color: #003265;
+	z-index: 10;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonBuscar:hover {
+	text-decoration:none;
+    background-color:#003265;
+	font-family: "Roboto-Light";
+    color: #ffffff; 
+}
+
+.BotonPreprogramacion {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 477px;
+	width:160px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 30;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonPreprogramacion:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonNovedades {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 637px;
+	width:140px;
+	height:35px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	background-color: #f7ea32;
+	z-index: 30;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonNovedades:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265;
+}
+
+.BotonCerrar {
+    position:fixed;
+	margin-top: 34px;
+	margin-left: 1169px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 30;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCerrar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}
+
+.BotonImprimir {
+    position:absolute;
+	margin-top: 547px;
+	margin-left: 999px;
+	width:90px;
+	height:27px;
+	color: #ffffff;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonImprimir:hover {
+	text-decoration:none;
+    background-color:#a7afff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:3px solid #a7afff;
+	border-right:3px solid #a7afff;
+	border-bottom:3px solid #a7afff;
+	border-left:3px solid #a7afff;
+	cursor:pointer; 
+}
+
+.BotonGuardar {
+    position:absolute;
+	margin-top: 547px;
+	margin-left: 1100px;
+	width:90px;
+	height:27px;
+	color: #ffffff;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #003265;
+	z-index: 7;
+	border-top:3px solid #003265;
+	border-right:3px solid #003265;
+	border-bottom:3px solid #003265;
+	border-left:3px solid #003265;
+	cursor:pointer;
+}
+
+.BotonGuardar:hover {
+	text-decoration:none;
+    background-color:#a7afff;
+	font-family: "Roboto-Bold";
+    color: #003265;
+	border-top:3px solid #a7afff;
+	border-right:3px solid #a7afff;
+	border-bottom:3px solid #a7afff;
+	border-left:3px solid #a7afff;
+	cursor:pointer; 
+}
+
+.BotonCancelar {
+    position:absolute;
+	margin-top: 547px;
+	margin-left: 1202px;
+	width:90px;
+	height:27px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCancelar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}

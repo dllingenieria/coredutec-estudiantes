@@ -1,0 +1,77 @@
+body {
+	background-image: url(../images/patrones.png);
+	background-size: cover;
+}
+
+.cuerpo{
+	padding-left: 2rem;
+	padding-right: 4rem;
+	padding-top: 1.5rem;
+}
+
+.botones {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.titulo3{ 
+	font-size: 14px;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	font-family: "Roboto-light";
+	border-radius: 3px 3px 3px 3px;
+	width: 10.5rem;
+	height: 1.5rem;
+    text-align: left;
+}
+
+.lista {
+	margin-right: 1rem;
+	height: 1.4rem;
+}
+
+.titulo3, .lista {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.abajo {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+} 
+
+.botonera {
+	position: absolute;
+    right: 2rem;
+	bottom:4rem;  
+}
+
+.ir {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+	margin-top: 0.5rem;
+} 
+
+.datos_personales {
+    text-align: left;
+    margin-bottom: 0.2rem;
+}
+
+.campos_tercero {
+    margin-right: 4rem;
+}
+
+.campos {
+    margin-top: 1rem;
+}
+
+.campos1 {
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+
+.hide_column{
+    display : none;
+}

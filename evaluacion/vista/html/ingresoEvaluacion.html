@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ingreso Evaluación</title>
+	<link rel="stylesheet" href="../../../vista/css/template.css" type="text/css">
+	<link rel="stylesheet" href="../../../vista/css/evaluacion.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/fuentes.css"/>
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/tabla.css"/>
+	<link rel="shortcut icon" href="../../../vista/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/popups.css"/> 
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" type="text/javascript"></script>-->
+	 <link rel="stylesheet" type="text/css" href="../../../includes/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+	 <script src="../../../includes/jquery-2.0.3.min.js" type="text/javascript" ></script>
+	 <script src="../../../includes/jquery-ui-1.11.4.custom/jquery-ui.js" type="text/javascript" ></script>
+	<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="../../../includes/jquery.bpopup.min.js" type="text/javascript"></script>
+	<!--<script src="../../../vista/js/sesion.js" type="text/javascript" ></script>-->
+	<script src="../js/evaluacion.js" type="text/javascript"></script>	
+</head>
+<body>
+	<!-- ENCABEZADO -->
+	<section class="encabezado">
+		<!-- CABECERA -->
+		<section class="cabecera"></section>
+		<!-- FIN CABECERA -->
+		<!-- BARRA DE NAVEGACIÓN -->
+		<nav class="barraNavegacion">
+		</nav>
+		<!-- FIN BARRA DE NAVEGACIÓN -->
+	</section>
+	<!-- FIN ENCABEZADO -->
+	<!-- CUERPO -->
+	<section class="cuerpo">
+		<label class="titulo">EVALUACIÓN DEL ESTUDIANTE</label><br><br>
+		
+		<!--<form name="captcha-form" method="POST" action="captcha-verify.php">-->
+		
+		<label class="titulo azul">Numero Identificación</label> 
+		<input type="text" id="txtIdentificacion" width="25" /><br><br>
+		<label class="titulo azul">Id Matrícula</label>
+		<input type="text" id="txtIdMatricula" width="25" /><br><br>
+        <img src="../../../modelo/captcha.php" border="0" /><br><br>
+		<label class="titulo azul">Ingrese el codigo de la imagen</label>
+		<input type="text" id="code" width="25" />
+		<br><br>
+		<button id="btnIngresar" type="button" class="boton final" onclick="">Ingresar</button>
+
+	<!--	</form>-->
+		
+	</section>
+        
+		
+		<div id="element_to_pop_upCon" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="300" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoConfirmacion1" class="popup"></label>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnDireccion"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div>
+		
+		<div id="element_to_pop_upMen" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="410" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoError" class="popup"></label>
+
+                    <br><br>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAcePop"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div>  
+		<!-- div nuevo para confirm-->
+		<div id="contenedor" class="element_to_pop_upMensaje" style="display:none;"></div>
+		<div id="element_to_pop_upCon1" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="300" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoConfirmacion2" class="popup"></label>
+					<br><br>
+					<input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAceptar" class="b-close botonAceptar" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+					
+                    <input type="button" name="element_to_pop_upConf" value="Cerrar" id="btnCerrar"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div>
+		<!-- -->
+		
+	<!-- FIN CUERPO -->
+	<!-- FOOTER -->
+	<footer></footer>
+	<!-- FIN FOOTER -->
+</body>
+</html>

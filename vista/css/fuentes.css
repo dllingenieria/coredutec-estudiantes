@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+
+/* Seccion Fuentes */
+
+@font-face {
+    font-family: "Roboto-Black";
+    src:url(../fuentes/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    src:url(../fuentes/Roboto-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src:url(../fuentes/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-BoldItalic";
+    src:url(../fuentes/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Bold";
+    src:url(../fuentes/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-BoldItalic";
+    src:url(../fuentes/RobotoCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Italic";
+    src:url(../fuentes/RobotoCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Light";
+    src:url(../fuentes/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-LightItalic";
+    src:url(../fuentes/RobotoCondensed-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Regular";
+    src:url(../fuentes/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Italic";
+    src:url(../fuentes/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src:url(../fuentes/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-LightItalic";
+    src:url(../fuentes/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src:url(../fuentes/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic";
+    src:url(../fuentes/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src:url(../fuentes/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src:url(../fuentes/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-ThinItalic";
+    src:url(../fuentes/Roboto-ThinItalic.ttf);
+}

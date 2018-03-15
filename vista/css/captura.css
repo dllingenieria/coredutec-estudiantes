@@ -1,0 +1,411 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+body {
+	background-image: url(../images/capturagroup1.jpg);
+	background-size: cover;
+}
+
+/* Seccion Cabecera */	
+
+#formaCabeceraAzul {
+	position:fixed;
+	width:100%;
+	height:85px;
+	z-index:2;
+	background:#003265;
+	top:0px;
+	left:0px;
+}
+
+#formaRectanguloBlanco {
+	position:fixed;
+	width:300px;
+	height:65px;
+	z-index:3;
+	border-radius: 10px 10px 10px 10px;
+	background:#ffffff;
+	margin-left: 40px;
+	margin-top: 1px;
+}
+
+
+#imgLogoCet {
+	position:fixed;
+	width:299px;
+	height:83px;
+	z-index:4;
+	margin-left: 45px;
+	margin-top: -16px;
+}
+
+#titulo1 {
+	position:fixed;
+	width:300px;
+	height:115px;
+	z-index:4;
+	margin-left: 500px;
+	margin-top: 5px;
+	font-family: "Roboto-Black";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo2 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:5;
+	margin-left: 500px;
+	margin-top: 30px;
+	font-family: "Roboto-Light";
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#titulo3 {
+	position:fixed;
+	width:346px;
+	height:115px;
+	z-index:5;
+	margin-left: 981px;
+	margin-top: 5px;
+	font-family: "Roboto-Light";
+	font-size: 15px;
+	color: #ffffff;
+}
+
+#division {
+	position:fixed;
+	width:2px;
+	height:65px;
+	z-index:3;
+	background:#ffffff;
+	margin-left: 906px;
+	margin-top: 1px;
+}
+
+#formaRectanguloAmarillo {
+	position:fixed;
+	width:100%;
+	height:35px;
+	z-index:2;
+	background:#f7ea32;
+	margin-left: -8px;
+	margin-top: 77px;
+}
+
+
+/* Seccion Pie Página */	
+
+#formaRectanguloPiePagina {
+	position:fixed;
+	width:100%;
+	height:42px;
+	z-index:10;
+	background:#003e7e;
+	bottom:0px;
+	left:0px;
+}
+
+#imgRedesSociales {
+	position:fixed;
+	z-index:10;
+	bottom:0px;
+	left: 40px;	
+}
+
+.imgLogos {
+	position:fixed;
+	z-index:10;
+	bottom:-7px;
+	left: 876px;	
+}
+
+/* Seccion Cuerpo Página */
+
+.LblCaptura {
+	position:absolute;
+	width:167px;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 3px 0px 0px 3px;
+	margin-left: 744px;
+	margin-top: 159px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+
+.TxtCaptura {
+	position:absolute;
+	width:252px;
+	height:20px;
+	z-index:16;
+	background:#ffffff;
+	border-radius: 0px 3px 3px 0px;
+	margin-left: 917px;
+	margin-top: 159px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border:1px solid #c5c5c5;
+}
+
+#lblFecha, #txtFecha {
+	margin-top: 189px;
+
+}
+
+
+#fondoerrores {
+	position:absolute;
+	width:521px;
+	height:146px;
+	z-index:2;
+	background:#f1f1f1;
+	border-radius: 5px 5px 5px 5px;
+	margin-left: 744px;
+	margin-top: 274px;
+}
+
+.TxtCarga {
+	position:absolute;
+	width:433px;
+	height:30px;
+	z-index:4;
+	background:#ffffff;
+	border-radius: 4px 4px 4px 4px;
+	margin-left: 735px;
+	margin-top: 225px;
+	font-family: "Roboto-Thin";
+	font-size: 18px;
+	color: #2d4191;
+	padding-left: 9px;
+	padding-top: 1px;
+}
+
+#men_err {
+	font-family: "Roboto-Light";
+	font-size: 17px;
+	color: #003265;
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+/* Seccion Botones */
+
+.BotonCapturar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: -8px;
+	padding: 7px 13px;
+	color: #ffffff;
+	font-family: "Roboto-Bold";
+	font-size: 0.9rem;
+	background-color: #003265;
+	z-index: 7;
+	border:1px solid #003265;
+	cursor:pointer;
+}
+
+.BotonBuscar {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 174px;
+	padding: 7px 13px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 7;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonBuscar:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff; 
+}
+
+.BotonPreprogramacion {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 349px;
+	padding: 7px 13px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 7;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonPreprogramacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff; 
+}
+
+.BotonNovedades {
+    position:fixed;
+	margin-top: 77px;
+	margin-left: 487px;
+	padding:7px 13px;
+	color: #003265;
+	font-family: "Roboto-Light";
+	font-size: 0.9rem;
+	background-color: #f7ea32;
+	z-index: 7;
+	border:1px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonNovedades:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonMatriculas{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 586px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 7;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonMatriculas:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonEvaluacion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 681px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 7;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonEvaluacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonFacturacion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 778px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 7;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonFacturacion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonReportes{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 1005px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 7;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonReportes:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonAdministracion{
+	position: fixed;
+    margin-top: 77px;
+    margin-left: 881px;
+    padding:7px 13px;
+    color: #003265;
+    font-family: "Roboto-Light";
+    font-size: 0.9rem;
+    background-color: #f7ea32;
+    z-index: 30;
+    border: 1px solid #f7ea32;
+    cursor: pointer;
+}
+
+.BotonAdministracion:hover {
+	text-decoration:none;
+    background-color:#003265;
+    border:1px solid #003265;
+    color: #ffffff;
+}
+
+.BotonCerrar {
+    position:fixed;
+	margin-top: 34px;
+	margin-left: 1169px;
+	width:120px;
+	height:30px;
+	color: #003265;
+	font-family: "Roboto-Regular";
+	font-size: 17px;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #f7ea32;
+	z-index: 7;
+	border-top:3px solid #f7ea32;
+	border-right:3px solid #f7ea32;
+	border-bottom:3px solid #f7ea32;
+	border-left:3px solid #f7ea32;
+	cursor:pointer;
+}
+
+.BotonCerrar:hover {
+	text-decoration:none;
+    background-color:#f7ea32;
+	font-family: "Roboto-Bold";
+    color: #003265; 
+}

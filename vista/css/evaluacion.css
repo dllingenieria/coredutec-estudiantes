@@ -1,0 +1,219 @@
+
+body {
+	background-image: url(../images/Fw.jpg);
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1.7rem;
+}
+
+.formatoEvaluacion {
+	position: relative;
+	padding-top: 1rem;
+}
+
+.lblGeneral {
+	position: absolute;
+	width:167px;
+	height:21px;
+	z-index:16;
+	background:#003265;
+	border-radius: 3px 0px 0px 3px;
+	font-family: "Roboto-Light";
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 12px;
+	padding-top: 3px;
+	margin-top: 24.5px;
+}
+
+.txtGeneral {
+	position: absolute;
+	width:270px;
+	height:24px;
+	z-index:10;
+	background:#ffffff;
+	border-radius: 0px 3px 3px 0px;
+	margin-left: -18.6rem;
+	margin-top: 47px;
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #2d4191;
+	padding-left: 5px;
+	padding-top: 1px;
+	border:1px solid #c5c5c5;
+}
+
+.left1 {
+	margin-left: 31rem;
+}
+
+.left2 {
+	margin-left: 12.4rem;
+}
+
+.top1 {
+	margin-top: 3.7rem;
+
+}
+.top2 {
+	margin-top: 82px;
+
+}
+
+.texto {
+	font-family: "Roboto-Regular";
+	font-size: 15px;
+	color: #003265;
+	margin-top: 3.5rem;
+	padding: 0.1rem;
+}
+
+.linea1 {
+	width: 80%;
+	padding-top: 1rem;
+	margin-top: 6rem;
+	z-index:10;	
+}
+
+.linea2 {
+	width: 78%;
+	padding-top: 2rem;
+	z-index:10;
+
+}.linea3 {
+	width: 100%;
+	padding-top: 2rem;
+	z-index:10;
+}
+
+.cuadroTexto {
+	width:59rem; 
+	height:3rem; 
+	padding-left:5px; 
+	border-radius: 4px 4px 4px 4px
+}
+
+.seleccion {
+    margin-top: 1.52rem;
+	margin-left: 11.1rem;
+	height: 24px;
+	font-size: 14px;
+}
+
+.descripcion {
+	font-family: 'Roboto-Light';
+	padding-top:  0.7rem;
+	
+}
+
+.ancho {
+	width: 50rem;
+}
+
+.tablaEvaluativa {
+	width:968px;
+	height:115px;
+	/*font-family: "Roboto-Light";*/
+	font-size: 14px;
+	color: #003265;
+}
+
+.principales {
+	font-family: "Roboto-Bold";
+	font-size: 14px;
+	color: #003265;
+	margin-top: 3rem;	
+}
+
+
+#imgNovedades {
+	position:fixed;
+	z-index:-1;
+	right: 0.5rem;
+	bottom: 2.5rem;
+}
+
+.izquierda {
+	position: absolute;
+	right: 21rem;
+}
+
+.izquierda2 {
+	position: absolute;
+	right: 26rem;
+}
+
+.campoVacio {
+	height: 7rem;
+}
+
+.datatable{
+	/*position:absolute;*/
+	width:65%;
+	height:25px;
+	z-index:9;
+	margin-left: 240px;
+	/*margin-top: 180px; *//*190*/
+	font-size: small !important; 
+	/*font-size: 0.95rem;*/
+
+}
+
+.tablaModulos{
+	width: 70%;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.tablaModulos th, .tablaModulos td {
+	width: 1px;
+	padding: 5px;
+	text-align: left;   
+	white-space: nowrap; 
+	font-size: x-small !important; 
+}
+
+.tablaModulos th{
+	font-family: "Roboto-Bold";
+	background-color: #003265;
+	color: white;
+}
+.tablaModulos td{
+	font-family: "Roboto-Light";
+	background-color: #F0F0F0;
+}
+
+.botonesModuloCurso{
+	margin-left: 560px;
+}
+
+.tablaCursos{
+	width: 70%;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.tablaCursos th, .tablaCursos td {
+	width: 1px;
+	padding: 5px;
+	text-align: left;   
+	white-space: nowrap; 
+	font-size: x-small !important; 
+}
+
+.tablaCursos th{
+	font-family: "Roboto-Bold";
+	background-color: #003265;
+	color: white;
+}
+.tablaCursos td{
+	font-family: "Roboto-Light";
+	background-color: #F0F0F0;
+}
+
+.txtGeneral1{
+	width:300px !important;
+}

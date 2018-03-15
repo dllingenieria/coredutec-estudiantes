@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 16 de 2016)  */
+
+table, th, td {
+	border-collapse: collapse;
+}
+
+td {
+	padding-left:5px
+}
+
+/* Seccion DIV MATRICULA */
+
+.RectanguloTitulos {
+	height:25px;
+	z-index:9;
+	background:#ffffff;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 3px;
+	font-family: "Roboto-Bold";
+	font-size: 19px;
+	color: #003265;
+	padding-left: 12px;
+	margin-top: 2rem;
+    margin-bottom: 0.5rem;
+	padding-top: 1px;
+	padding-bottom: 7px;
+}
+
+/* Seccion Tablas */
+
+#tablaDatos {
+	z-index:6;
+	margin-left: 10px;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+}
+
+#tablaDatos th{
+	text-align: left;
+}
+
+#tablaAsistencia {
+	z-index:6;
+	margin-left: 10px;
+	font-size: 13px;
+}
+
+th{font-family: "Roboto-Bold"}
+td{font-family: "Roboto-Light"}
+
+.firma {
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+	margin-left: 0.6rem;
+	margin-top: 3rem;
+}
+
+.observaciones {
+	margin-top: 1rem;
+}

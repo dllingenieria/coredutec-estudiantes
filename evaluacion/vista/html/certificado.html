@@ -1,0 +1,145 @@
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Certificado</title>
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/fuentes.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/template.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/evaluacion.css"/>
+	<link rel="shortcut icon" href="../../../vista/images/favicon.ico"/>
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/tabla.css"/>
+	<link rel="shortcut icon" href="../../../vista/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../../vista/css/popups.css"/> 
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" type="text/javascript" ></script>-->
+	 <link rel="stylesheet" type="text/css" href="../../../includes/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+	 <script src="../../../includes/jquery-2.0.3.min.js" type="text/javascript" ></script>
+	 <script src="../../../includes/jquery-ui-1.11.4.custom/jquery-ui.js" type="text/javascript" ></script>
+	<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="../../../includes/jquery.bpopup.min.js" type="text/javascript"></script>
+	<!--<script src="../js/sesion.js" type="text/javascript" ></script>-->
+	<script src="../js/evaluacion.js" type="text/javascript"></script>	
+</head>
+<body>
+	<!-- ENCABEZADO -->
+	<section class="encabezado">
+		<!-- CABECERA -->
+		<section class="cabecera"></section>
+		<!-- FIN CABECERA -->
+
+		<!-- BARRA DE NAVEGACIÓN -->
+		<nav class="barraNavegacion"></nav>
+		<!-- FIN BARRA DE NAVEGACIÓN -->
+	</section>
+	<!-- FIN ENCABEZADO -->
+
+	<!-- CUERPO --> 
+	<section class="cuerpo">
+	<div id="element_to_pop_upCon" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="300" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoConfirmacion1" class="popup"></label>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnDireccion"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div>
+		
+		<div id="element_to_pop_upMen" class="element_to_pop_upMensaje">
+
+    <div>
+
+        <table id="tblPopup" width="410" align="left" border="0">
+
+            <tr>
+
+                <td align="center">
+
+                    <label id="textoError" class="popup"></label>
+
+                    <br><br>
+
+                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAcePop"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+		</div> 
+		<br>
+		
+		<!--<div id="divListaModulosCertificados" class="datatable" style="display:none;">
+            <table id="tablaModulosCertificados" class="display compact" cellspacing="0" width="100%"></table>
+			<br>
+            <div class="botones">
+		    
+			<form id="frmCertiM" method="post" >
+			<button id="btnGenerarCertiM" type="button" class="boton">Descargar certificado</button>
+			<button id="btnVolverAcursos" type="button" class="boton">Volver</button>
+			<input id="hiddNombEstu" name="hiddNombEstu" type="hidden" class="" />
+			<input id="hiddIdenEstu" name="hiddIdenEstu" type="hidden" class="" />
+			<input id="hiddcodigo" name="hiddcodigo" type="hidden" class="" />
+			<input id="hiddLugarExp" name="hiddLugarExp" type="hidden" class="" />
+			<input id="hiddNombreMod" name="hiddNombreMod" type="hidden" class="" />
+			<input id="hiddNombreCur" name="hiddNombreCur" type="hidden" class="" />
+			<input id="hiddModulo" name="hiddModulo" type="hidden" class="" />
+			<input id="hiddDuracion" name="hiddDuracion" type="hidden" class="" />
+			</form>
+			</div>
+			
+		</div>-->
+		
+		<div id="divListaCursos" class="datatable" style="display:'';">
+            <table id="tablaCursos" class="display compact" cellspacing="0" width="100%"></table>
+			<br>
+            <div class="botones">
+		    
+			<form id="frmCertiC" method="post" >
+			<button id="btnGenerarCertiC" type="submit" class="boton">Descargar certificado</button>
+			<!--<button id="btnModulos" type="button" class="boton">Descargar certficados por Módulos</button>-->
+			<button id="btnVolver" type="button" class="boton">Volver</button>
+			<input id="hiddNombEstu" name="hiddNombEstu" type="hidden" class="" />
+			<input id="hiddIdenEstu" name="hiddIdenEstu" type="hidden" class="" />
+			<input id="hiddLugarExp" name="hiddLugarExp" type="hidden" class="" />
+			<input id="hiddcodigo" name="hiddcodigo" type="hidden" class="" />
+			<input id="hiddNombreCur" name="hiddNombreCur" type="hidden" class="" />
+			<input id="hiddModulo" name="hiddModulo" type="hidden" class="" />
+			<input id="hiddDuracion" name="hiddDuracion" type="hidden" class="" />
+			</form>
+			</div>
+			
+			
+		</div>
+		<br>
+		<div id="divOpcionBtn" class="botonesModuloCurso">
+		<!--<button id="btnCursos" type="submit" class="boton">Cursos</button>
+		<button id="btnModulos" type="button" class="boton">Módulos</button>-->
+		<!--<button id="btnVolver" type="button" class="boton">Volver</button>-->
+		</div>
+		
+	</section>
+	<!-- FIN CUERPO -->
+
+	<!-- FOOTER -->
+	<footer></footer>
+	<!-- FIN FOOTER -->
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+	background-image: url(../images/patrones.png);
+	background-size: cover;
+}
+
+.izquierda, .derecha{
+	width: 51.5%;
+	display: inline-block;
+}
+
+.izquierda{
+	margin-left: 3rem;
+	margin-top: 2rem;
+	width: 40%;
+}
+
+.derecha {
+	margin-top: 2rem;
+	vertical-align: top;
+}
+
+.campos {
+	margin-top: 1rem;
+}
+
+.azul{
+	display: inline-block;
+	width: 12rem;
+	font-family: "Roboto-Light";
+	padding-bottom: 1px;
+}
+
+.campo{
+	vertical-align: top;
+	width: 18rem;
+}
+
+.modulosCursados{
+	margin-top: 2rem;
+}
+
+.cedula{
+	margin-right: 1rem;
+	padding-left: 0.2rem;
+	
+}
+
+.modulosDisponibles{
+	float: right;
+}
+
+th {
+	background-color: #003265;
+	color: white;
+	text-align: center;
+}
+
+.matricular{
+	float: right;
+	margin-top: -3.6rem;
+	margin-right: 3.5rem;
+	width: 8rem;
+}
+
+.TextAreaObservaciones {
+	width: 31rem;
+	height: 13rem;
+}
+
+.botonera {
+	position: absolute;
+	right: 3.1rem;
+	bottom:3.8rem;  
+}
+
+.izquierda1 {
+	/*right: inherit;*/
+	position: absolute;
+		/*nos posicionamos en el centro del navegador*/
+		top:88%;
+		left:18%;
+		/*determinamos una anchura*/
+		width:900px;
+		/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+		margin-left:-200px;
+		/*determinamos una altura*/
+		height:50px;
+		/*indicamos que el margen superior, es la mitad de la altura*/
+		margin-top:-130px;
+		/*border:1px solid #808080;*/
+		padding:5px;
+	
+}
+
+.dataTable td, .dataTable th{
+	/*font-size: 0.8rem;*/
+	font-size: x-small !important; 
+}
+
+.datatable{
+	font-size: small !important; 
+	/*font-size: 0.95rem;*/
+
+}
+
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}
+
+

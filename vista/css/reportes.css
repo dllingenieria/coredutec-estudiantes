@@ -1,0 +1,99 @@
+body {
+	background-image: url(../images/patrones.png);
+	background-size: cover;
+}
+
+canvas{
+	width: 100% !important;
+	max-width: 800px;
+	height: auto !important;
+}
+
+.cuerpo{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 1rem;
+}
+
+.botones {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.lista{
+	margin-right: 1rem;
+	height: 1.4rem;
+}
+
+.titulo, .lista {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.abajo {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+} 
+
+.botonera {
+	position: absolute;
+	right: 3.1rem;
+	bottom:3.8rem;  
+}
+.izquierda {
+	/*right: inherit;*/
+		/*nos posicionamos en el centro del navegador*/
+		position: absolute;
+		top:50%;
+		left:45%;
+		/*determinamos una anchura*/
+		width:900px;
+		/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+		margin-left:60px ;
+		/*determinamos una altura*/
+		height:50px;
+		/*indicamos que el margen superior, es la mitad de la altura*/
+		margin-top:30px;
+		/*border:1px solid #808080;*/
+		padding:5px;
+	
+}
+
+.ir {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 2rem;
+	margin-top: 0.5rem;
+} 
+
+.top{
+	text-align: center;
+	margin-bottom: 1.9rem;
+	margin-top: 50px;
+}
+
+.filtros {
+	margin-right: 1rem;
+}
+
+.resaltar {
+	font-weight: bold;
+}
+
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}
+
+.contenedorTabla{
+	text-align: center;
+	height: 12rem;
+}

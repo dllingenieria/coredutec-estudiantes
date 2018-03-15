@@ -1,0 +1,117 @@
+body {
+	background-image: url(../images/cuadros3.png);
+	background-size: cover;
+}
+
+.titulo{
+	border-radius: 0;
+}
+
+.superior{
+	background-color: #e5f2fd;
+	padding-top: 0.6rem;
+	text-align: center;
+	height: 2.6em;
+}
+
+.medio {
+	height: 20rem;
+}
+
+.titulo, .opciones{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.opciones {
+	margin-right: 3rem;
+	width: 9rem;
+}
+
+.boton{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.tablaInformacion{
+	margin-left: 2rem;
+	margin-right: 2rem;
+	font-size: 0.8rem;
+	margin-top: 0.9rem;
+	cursor: initial;
+}
+
+.tablaInformacion td{
+	background-color: #F0F0F0;
+}
+
+.tablaInformacion th, .tablaInformacion td {
+	/*white-space: nowrap; */
+	padding: 5px;
+	width: 1px;
+}
+
+.dataTable th, .dataTable td { 
+	cursor: default;
+}
+
+.tablaInformacion th{
+	font-family: "Roboto-Bold";
+	background-color: #003265;
+	color: white;
+}
+.tablaInformacion td{
+	font-family: "Roboto-Light";
+}
+
+table#parrilla tbody tr td{
+	text-align: center;  
+}
+
+.izquierda, .derecha{
+	height: 11.5rem;
+	display: inline-block;
+}
+.izquierda{
+	width: 40%;
+	margin-top: 1.2rem;
+}
+.derecha{
+	width: 57%;
+}
+
+.inferior{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+tr > td:first-child{
+	/*font-family: "Roboto-Bold";*/
+	font-weight: bold;
+	background-color: #003265;
+	text-align: center;
+	color: white;
+}
+.seleccion{
+	background-color: #F7EA32;
+}
+
+.libre{
+	background-color: #F0F0F0;
+}
+
+.ocupado{
+	background-color: #9E9E9E;
+}
+.cruce{
+	background-color: red;
+}
+
+.selectInfo{
+	width: 9rem;
+}
+
+.boton.manual {
+    margin-top: 0.5rem;
+    float: right;
+}

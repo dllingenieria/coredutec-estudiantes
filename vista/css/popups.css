@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Creado por: Julián Echeverry Montoya - Diseñador Visual para Dimension IT S.A.S. (Abril 5 de 2016)  */
+
+/* Seccion Fuentes */
+@font-face {
+    font-family: "Roboto-Black";
+    src:url(../fuentes/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    src:url(../fuentes/Roboto-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src:url(../fuentes/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-BoldItalic";
+    src:url(../fuentes/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Bold";
+    src:url(../fuentes/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-BoldItalic";
+    src:url(../fuentes/RobotoCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Italic";
+    src:url(../fuentes/RobotoCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Light";
+    src:url(../fuentes/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-LightItalic";
+    src:url(../fuentes/RobotoCondensed-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Regular";
+    src:url(../fuentes/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Italic";
+    src:url(../fuentes/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src:url(../fuentes/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-LightItalic";
+    src:url(../fuentes/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src:url(../fuentes/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic";
+    src:url(../fuentes/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src:url(../fuentes/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src:url(../fuentes/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-ThinItalic";
+    src:url(../fuentes/Roboto-ThinItalic.ttf);
+}
+
+/* pop ups */
+
+.element_to_pop_up { 
+    background-color:#ffffff;
+	background-image:url("../images/popupblanco.png");
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:494px;
+    height: 177px;
+}
+
+.element_to_pop_upConfirmacion { 
+    //background-image:url("../images/popupconfirmacion.png") ;
+    background-image:url("../images/popupobservacion.png");
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:454px;
+    height: 96px;
+    padding-top: 61px;
+	text-align:center;
+}
+
+.element_to_pop_upPregunta { 
+    background-image:url("../images/popuperror.png");
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:454px;
+    height: 96px;
+    padding-top: 61px;
+}
+
+.element_to_pop_upError { 
+    background-image:url("../images/popuperror.png");
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:454px;
+    height: 115px;
+    padding-top: 42px;
+    font-family: "Roboto-Bold";
+
+}
+
+.element_to_pop_upMensaje { 
+    background-image:url("../images/popupblanco.png");
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:454px;
+    height: 96px;
+    padding-top: 61px;
+	text-align:center;
+}
+
+.popup{
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    color: #003265;
+	margin-top: 30px;
+}

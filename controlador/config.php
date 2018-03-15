@@ -26,13 +26,16 @@ define('TMP_PATH', '/Applications/XAMPP/xamppfiles/htdocs/corfuturoHV/PDF' . DIR
 
 //require_once '../../includes/swiftMailer/swift_required.php';
 
-define('BASE_DATOS', 'SIREX');
-define('SERVIDOR', 'localhost');
+define('BASE_DATOS', 'SINFOMPC');
+define('SERVIDOR', '201.217.194.205');
 define('PUERTO', '3306');
-define('USUARIO', 'sirex');
+define('USUARIO', 'DLL-Ingenieria');
+define('CONTRASENA', 'd09;LU>l');
+
+/*define('USUARIO', 'sirex');
 define('CONTRASENA', 'x0uJcss2');
 
-/*define('BASE_DATOS', 'CET');
+define('BASE_DATOS', 'CET');
 define('SERVIDOR', '190.0.49.18');
 define('PUERTO', '3306');
 define('USUARIO', 'dit');

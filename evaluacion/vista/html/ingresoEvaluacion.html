@@ -34,97 +34,66 @@
 	<section class="cuerpo">
 		<div id="Principal">
 			<label class="titulo">EVALUACIÓN DEL ESTUDIANTE</label><br><br>
-			<label class="titulo azul">Numero Identificación</label> 
+			<label class="titulo azul">Número Identificación</label> 
 			<input type="text" id="txtIdentificacion" width="25" /><br><br>
 			<label class="titulo azul">Id Matrícula</label>
 			<input type="text" id="txtIdMatricula" width="25" /><br><br>
 	        <img src="../../../modelo/captcha.php" border="0" /><br><br>
-			<label class="titulo azul">Ingrese el codigo de la imagen</label>
+			<label class="titulo azul">Ingrese el código de la imagen</label>
 			<input type="text" id="code" width="25" />
 			<br><br>
 			<button id="btnIngresar" type="button" class="boton final" onclick="">Ingresar</button>
 		</div>
+		<div id="texto">
+			<label id="lbltexto">
+				Respetado Estudiante: El equipo de soporte virtual de la Corporación de Educación Tecnológica Colsubsidio – AIRBUS GROUP, lo saluda y confirma nuestro compromiso por la excelencia y la satisfacción de nuestros clientes, por tal motivo, lo invitamos a tener presente las siguientes recomendaciones:<br><br>
+				La evaluación de satisfacción del servicio al cliente estará activa una vez su docente registre en nuestro sistema de información, como mínimo el 50% de sus asistencias y quedará inactivo una vez el curso finalice, es decir, antes de la fecha de inicio o después de la fecha de finalización los estudiantes no podrán responder las encuestas en nuestra plataforma estudiantes.cetcolsubsidio.edu.co.<br><br>
+				Si ha olvidado su ID de matrícula, lo puede consultar vía telefónica (1) 704 5810.<br>Bogotá – Colombia
+			</label>
+		</div>
 	</section>
-        
-		
-		<div id="element_to_pop_upCon" class="element_to_pop_upMensaje">
-
-    <div>
-
-        <table id="tblPopup" width="300" align="left" border="0">
-
-            <tr>
-
-                <td align="center">
-
-                    <label id="textoConfirmacion1" class="popup"></label>
-
-                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnDireccion"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </div>
-
-		</div>
-		
-		<div id="element_to_pop_upMen" class="element_to_pop_upMensaje">
-
-    <div>
-
-        <table id="tblPopup" width="410" align="left" border="0">
-
-            <tr>
-
-                <td align="center">
-
-                    <label id="textoError" class="popup"></label>
-
-                    <br><br>
-
-                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAcePop"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </div>
-
-		</div>  
-		<!-- div nuevo para confirm-->
-		<div id="contenedor" class="element_to_pop_upMensaje" style="display:none;"></div>
-		<div id="element_to_pop_upCon1" class="element_to_pop_upMensaje">
-
-    <div>
-
-        <table id="tblPopup" width="300" align="left" border="0">
-
-            <tr>
-
-                <td align="center">
-
-                    <label id="textoConfirmacion2" class="popup"></label>
-					<br><br>
-					<input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAceptar" class="b-close botonAceptar" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
-					
-                    <input type="button" name="element_to_pop_upConf" value="Cerrar" id="btnCerrar"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </div>
-
-		</div>
+	<div id="element_to_pop_upCon" class="element_to_pop_upMensaje">
+	    <div>
+	        <table id="tblPopup" width="300" align="left" border="0">
+	            <tr>
+	                <td align="center">
+	                    <label id="textoConfirmacion1" class="popup"></label>
+	                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnDireccion"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+	</div>
+	<div id="element_to_pop_upMen" class="element_to_pop_upMensaje">
+	    <div>
+	        <table id="tblPopup" width="410" align="left" border="0">
+	            <tr>
+	                <td align="center">
+	                    <label id="textoError" class="popup"></label>
+	                    <br><br>
+	                    <input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAcePop"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+	</div>  
+	<!-- div nuevo para confirm-->
+	<div id="contenedor" class="element_to_pop_upMensaje" style="display:none;"></div>
+	<div id="element_to_pop_upCon1" class="element_to_pop_upMensaje">
+	    <div>
+	        <table id="tblPopup" width="300" align="left" border="0">
+	            <tr>
+	                <td align="center">
+	                    <label id="textoConfirmacion2" class="popup"></label>
+						<br><br>
+						<input type="button" name="element_to_pop_upConf" value="Aceptar" id="btnAceptar" class="b-close botonAceptar" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+	                    <input type="button" name="element_to_pop_upConf" value="Cerrar" id="btnCerrar"  class="b-close" style="width: 96px; height: 27px; 		background:#003265; color: #ffffff; font-family: 'Roboto-Light'; font-size: 16px; border-radius: 6px 6px 6px 6px;" />
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+	</div>
 		<!-- -->
-		
 	<!-- FIN CUERPO -->
 	<!-- FOOTER -->
 	<footer></footer>

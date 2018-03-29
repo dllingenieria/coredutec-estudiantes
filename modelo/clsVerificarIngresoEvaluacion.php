@@ -69,12 +69,6 @@ class clsVerificarIngresoEvaluacion {
 					foreach ($filas as $fila) {
 						$array[] = $fila;
 					}
-					
-					// $array=array();
-					// $array['servicio']='servicios';
-					// $array['docente']='docente';
-					// $array['lugar']='lugar';
-					// $data['array']=$array;
 				}
 				else{
 					$data["mensaje"]="No se encontraron los datos generales para la evaluación";
@@ -89,7 +83,7 @@ class clsVerificarIngresoEvaluacion {
 		echo json_encode($array);
 	}
 	
-		public function cargarModulosVistosAevaluar($param) {
+	public function cargarModulosVistosAevaluar($param) {
 		extract($param);
 		$resultado = array();
         $registro = array();
@@ -108,17 +102,6 @@ class clsVerificarIngresoEvaluacion {
                 }
             }
 		}
-				// else{
-					// $data["mensaje"]="No se encontraron módulos para mostrar";
-					// $data["error"]=1;
-				// }
-		
-        // } else {
-            // $data["mensaje"]="No se pudieron consultar los módulos ";
-			// $data["error"]=1;
-        // }
-		
-		
 		echo json_encode($resultado);
 	}
 	

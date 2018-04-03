@@ -6,13 +6,22 @@ body {
 .cuerpo{
 	padding-left: 4rem;
 	padding-right: 4rem;
-	padding-top: 1.7rem;
+	/*padding-top: 1.7rem;*/
 }
 
 #Principal{
 	width: 25rem;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: -1rem;
+}
+
+.titulo{
+	font-size: 14px;
+}
+
+#botones{
+	text-align: center;
 }
 
 #texto{

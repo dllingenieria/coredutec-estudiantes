@@ -361,10 +361,6 @@ function cargarCabezote(){
 	data+='<div class="contenedorLogo">';	
 	data+='<img class="imgLogo" src="../../../vista/images/logocet2.png" alt="">';
 	data+='</div>';
-	data+='<div class="contenedorSesion">';
-	data+='<div class="loginTexto">Bienvenido (a) <span id="nombre">'+sessionStorage.nombres+'</span></div>';
-	data+='<button type="button" id="cerrarSesion" class="boton cerrarSesion">Cerrar Sesión</button>';
-	data+='</div>';
 	$(".cabecera").html(data);	
 }
 

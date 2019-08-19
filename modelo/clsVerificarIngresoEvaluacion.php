@@ -17,7 +17,7 @@ class clsVerificarIngresoEvaluacion {
 	
 		//Verificar fecha de nacimiento y cedula
 		$conexion->getPDO()->query("SET NAMES 'utf8'");
-        $sql = "CALL SPBUSCARDATOSTERCEROEVALUACION('$identificacion',$IdMatricula);";        
+        $sql = "CALL SPBUSCARDATOSTERCEROEVALUACION($pTipoDocumento,'$identificacion',$IdMatricula);";        
         if ($rs = $conexion->getPDO()->query($sql)) {
             $fila = $rs->fetch(PDO::FETCH_ASSOC);
 				if ($fila['Nombres'] == ""){
@@ -31,6 +31,7 @@ class clsVerificarIngresoEvaluacion {
 					$data["Id"]=$fila['Id']; 
 					$data["NumeroIdentificacion"]=$fila['NumeroIdentificacion']; 
 					$data["LugarExpedicion"]=$fila['LugarExpedicion'];
+					$data["TipoIdentificacion"]=$fila['TipoIdentificacion'];
 				}
         } else {
             $data["mensaje"]="No se pudieron consultar los datos de ingreso";
@@ -90,7 +91,7 @@ class clsVerificarIngresoEvaluacion {
 		$data=array('error'=>'','mensaje'=>'','array'=>'');
 		//Verificar fecha de nacimiento y cedula
 		$conexion->getPDO()->query("SET NAMES 'utf8'");
-        $sql = "CALL SPCARGARMODULOSVISTOSAEVALUAR('$identificacion',$IdMatricula);";        
+        $sql = "CALL SPCARGARMODULOSVISTOSAEVALUAR($tipoIdentificacion,'$identificacion',$IdMatricula);";        
         if ($rs = $conexion->getPDO()->query($sql)) {
             if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {
                 foreach ($filas as $fila) {
@@ -105,14 +106,14 @@ class clsVerificarIngresoEvaluacion {
 		echo json_encode($resultado);
 	}
 	
-		public function cargarModulosVistosAcertificar($param) {
+	public function cargarModulosVistosAcertificar($param) {
 		extract($param);
 		$resultado = array();
         $registro = array();
 		$data=array('error'=>'','mensaje'=>'','array'=>'');
 		//Verificar fecha de nacimiento y cedula
 		$conexion->getPDO()->query("SET NAMES 'utf8'");
-        $sql = "CALL SPCARGARMODULOSVISTOSACERTIFICAR('$identificacion',$IdMatricula);";        
+        $sql = "CALL SPCARGARMODULOSVISTOSACERTIFICAR($tipoIdentificacion,'$identificacion',$IdMatricula);";        
         if ($rs = $conexion->getPDO()->query($sql)) {
             if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {
                 foreach ($filas as $fila) {
@@ -124,16 +125,6 @@ class clsVerificarIngresoEvaluacion {
                 }
             }
 		}
-				// else{
-					// $data["mensaje"]="No se encontraron módulos para mostrar";
-					// $data["error"]=1;
-				// }
-		
-        // } else {
-            // $data["mensaje"]="No se pudieron consultar los módulos ";
-			// $data["error"]=1;
-        // }
-		
 		echo json_encode($resultado);
 	}
 	
@@ -144,7 +135,7 @@ class clsVerificarIngresoEvaluacion {
 		$data=array('error'=>'','mensaje'=>'','array'=>'');
 		//cargar cursos
 		$conexion->getPDO()->query("SET NAMES 'utf8'");
-        $sql = "CALL SPCARGARCURSOSVISTOS('$identificacion',$IdMatricula);";        
+        $sql = "CALL SPCARGARCURSOSVISTOS($tipoIdentificacion,'$identificacion',$IdMatricula);";        
         if ($rs = $conexion->getPDO()->query($sql)) {
             if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {
                 foreach ($filas as $fila) {
@@ -156,25 +147,33 @@ class clsVerificarIngresoEvaluacion {
                 }
             }
 		}
-				// else{
-					// $data["mensaje"]="No se encontraron módulos para mostrar";
-					// $data["error"]=1;
-				// }
-		
-        // } else {
-            // $data["mensaje"]="No se pudieron consultar los módulos ";
-			// $data["error"]=1;
-        // }
-		// $resultado1=array();
-		// $resultado1[0]="5.01.T4";
-		// $resultado1[1]=5;
-		// $resultado1[2]="Curso prueba";
-		// $resultado1[3]=10;
-		// $resultado[0]=$resultado1;
-		//print_r($resultado);
 		echo json_encode($resultado);
 	}
 
-}
+	public function consultarTiposDocumentos($param) {
+        extract($param);
+        $sql = "CALL SPCARGARTIPOIDENTIFICACION();";
+          $rs=null;
+        if ($rs = $conexion->getPDO()->query($sql)) {
+            if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($filas as $fila) {
+                    $fila = $this->CodificarEnUtf8($fila);
+                    $array[] = $fila;
+                }
+            }
+        } else {
+            $array = 0;
+        } 
+        echo json_encode($array);
+    }
 
+    private function CodificarEnUtf8($fila) {
+        $aux;
+        foreach ($fila as $value) {
+            $aux[] = utf8_encode($value);
+        }
+        return $aux;
+    }
+
+}
 ?>

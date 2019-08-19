@@ -32,7 +32,7 @@ $(function () {
 	cargarDatosGeneralesEvaluacion();
 	cargarModulosVistosAevaluar(); //para evaluacion
 	cargarCursos();
-
+	cargarTiposDocumentos();
 	//para que cargue los datos
 	// $("#txtIdMatricula").val(sessionStorage.IdMatricula); 
 	// $("#txtIdentificacion").val(sessionStorage.Identificacion);
@@ -202,6 +202,17 @@ $(function () {
 			}}, "json");
 	}
 
+	function cargarTiposDocumentos() {
+	    $.post("../../../controlador/fachada.php", {
+	        clase: 'clsVerificarIngresoEvaluacion',
+	        oper: 'consultarTiposDocumentos'
+	    }, function(data) {
+	        if (data !== 0) {
+	            formarOptionValueTipoDocumentos(data);
+	        }
+	    }, "json");
+	}
+
 	function cargarSelect(data, selectId) {
 		$(selectId).find('option').remove();
 		data.forEach(function(registro){
@@ -213,6 +224,15 @@ $(function () {
 		$(selectId).append($('<option>', {value: valor,text: texto}));
 	}
 	
+	function formarOptionValueTipoDocumentos(tiposDocumentos) { 
+	    for (i = 0; i < tiposDocumentos.length; i++) { 
+	        $('#cmbTipoIdentificacion').append($('<option>', {
+	            value: tiposDocumentos[i][0],
+	            text: tiposDocumentos[i][1]
+	        }));
+	    }
+	}
+
 	$("#btnIngresar").click(function(){
 		if($("#txtIdentificacion").val() == "") {
 			PopUpError("Por favor escriba el Número de Identificación");
@@ -239,6 +259,7 @@ $(function () {
 			oper: 'verificarIngreso',
 			code:$("#code").val(),
 			IdMatricula:IdMatricula,
+			pTipoDocumento:$("#cmbTipoIdentificacion option:selected").val(),
 			identificacion:identificacion
 		}, function(data) {
 			if (data.error !== "") {
@@ -253,6 +274,7 @@ $(function () {
 				sessionStorage.idTercero=data['Id']; 
 				sessionStorage.numeroIdentificacion=data['NumeroIdentificacion'];
 				sessionStorage.lugarExpedicion=data['LugarExpedicion'];
+				sessionStorage.tipoIdentificacion=data['TipoIdentificacion'];
 				window.location.href = "evaluacion.html";
 				//sacar popup para seleccionar si desea evaluar
 				// var divSeleccionModulo = $('<div>').attr({					 
@@ -452,6 +474,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarModulosVistosAevaluar',
+			tipoIdentificacion:sessionStorage.tipoIdentificacion,
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
 		}, function(data) { //console.log(data);
@@ -469,6 +492,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarModulosVistosAcertificar',
+			tipoIdentificacion:sessionStorage.tipoIdentificacion,
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
 		}, function(data) { console.log(data);
@@ -487,6 +511,7 @@ function cargarDatosGeneralesEvaluacion(){ //alert("entro");
 		$.post("../../../controlador/fachada.php", {
 			clase: 'clsVerificarIngresoEvaluacion',
 			oper: 'cargarCursos',
+			tipoIdentificacion:sessionStorage.tipoIdentificacion,
 			identificacion:sessionStorage.Identificacion,
 			IdMatricula:sessionStorage.IdMatricula
 		}, function(data) { //console.log(data);
